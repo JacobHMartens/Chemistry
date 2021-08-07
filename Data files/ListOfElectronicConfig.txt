@@ -1,0 +1,380 @@
+1 Hydrogen 1s1
+2 Helium 1s2
+3 Lithium [He]2s1
+4 Beryllium [He]2s2
+5 Boron [He]2s22p1
+6 Carbon [He]2s22p2
+7 Nitrogen [He]2s22p3
+8 Oxygen [He]2s22p4
+9 Fluorine [He]2s22p5
+10 Neon [He]2s22p6
+11 Sodium [Ne]3s1
+12 Magnesium [Ne]3s2
+13 Aluminum [Ne]3s23p1
+14 Silicon [Ne]3s23p2
+15 Phosphorus [Ne]3s23p3
+16 Sulfur [Ne]3s23p4
+17 Chlorine [Ne]3s23p5
+18 Argon [Ne]3s23p6
+19 Potassium [Ar]4s1
+20 Calcium [Ar]4s2
+21 Scandium [Ar]4s23d1
+22 Titanium [Ar]4s23d2
+23 Vanadium [Ar]4s23d3
+24 Chromium [Ar]4s13d5
+25 Manganese [Ar]4s23d5
+26 Iron [Ar]4s23d6
+27 Cobalt [Ar]4s23d7
+28 Nickel [Ar]4s23d8
+29 Copper [Ar]4s13d10
+30 Zinc [Ar]4s23d10
+31 Gallium [Ar]4s24p1
+32 Germanium [Ar]4s24p2
+33 Arsenic [Ar]4s24p3
+34 Selenium [Ar]4s24p4
+35 Bromine [Ar]4s24p5
+36 Krypton [Ar]4s24p6
+37 Rubidium [Kr]5s1
+38 Strontium [Kr]5s2
+39 Yttrium [Kr]5s24d1
+40 Zirconium [Kr]5s24d2
+41 Niobium [Kr]5s14d4
+42 Molybdenum [Kr]5s14d5
+43 Technetium [Kr]5s24d5
+44 Ruthenium [Kr]5s14d7
+45 Rhodium [Kr]5s14d8
+46 Palladium [Kr]4d10
+47 Silver [Kr]5s14d10
+48 Cadmium [Kr]5s24d10
+49 Indium [Kr]5s25p1
+50 Tin [Kr]5s25p2
+51 Antimony [Kr]5s25p3
+52 Tellurium [Kr]5s25p4
+53 Iodine [Kr]5s25p5
+54 Xenon [Kr]5s25p6
+55 Cesium [Xe]6s1
+56 Barium [Xe]6s2
+57 Lanthanum [Xe]6s25d1
+58 Cerium [Xe]6s24f15d1
+59 Praseodymium [Xe]6s24f3
+60 Neodymium [Xe]6s24f4
+61 Promethium [Xe]6s24f5
+62 Samarium [Xe]6s24f6
+63 Europium [Xe]6s24f7
+64 Gadolinium [Xe]6s24f75d1
+65 Terbium [Xe]6s24f9
+66 Dysprosium [Xe]6s24f10
+67 Holmium [Xe]6s24f11
+68 Erbium [Xe]6s24f12
+69 Thulium [Xe]6s24f13
+70 Ytterbium [Xe]6s24f14
+71 Lutetium [Xe]6s24f145d1
+72 Hafnium [Xe]6s25d2
+73 Tantalum [Xe]6s25d3
+74 Tungsten [Xe]6s25d4
+75 Rhenium [Xe]6s25d5
+76 Osmium [Xe]6s25d6
+77 Iridium [Xe]6s25d7
+78 Platinum [Xe]6s15d9
+79 Gold [Xe]6s15d10
+80 Mercury [Xe]6s25d10
+81 Thallium [Xe]6s26p1
+82 Lead [Xe]6s26p2
+83 Bismuth [Xe]6s26p3
+84 Polonium [Xe]6s26p4
+85 Astatine [Xe]6s26p5
+86 Radon [Xe]6s26p6
+87 Francium [Rn]7s1
+88 Radium [Rn]7s2
+89 Actinium [Rn]7s26d1
+90 Thorium [Rn]7s26d2
+91 Protactinium [Rn]7s25f26d1
+92 Uranium [Rn]7s25f36d1
+93 Neptunium [Rn]7s25f46d1
+94 Plutonium [Rn]7s25f6
+95 Americium [Rn]7s25f7
+96 Curium [Rn]7s25f76d1
+97 Berkelium [Rn]7s25f9
+98 Californium [Rn]7s25f10
+99 Einsteinium [Rn]7s25f11
+100 Fermium [Rn]7s25f12
+101 Mendelevium [Rn]7s25f13
+102 Nobelium [Rn]7s25f14
+103 Lawrencium [Rn]7s25f146d1
+104 Rutherfordium [Rn]7s26d2
+105 Dubnium [Rn]7s26d3
+106 Seaborgium [Rn]7s26d4
+107 Bohrium [Rn]7s26d5
+108 Hassium [Rn]7s26d6
+109 Meitnerium [Rn]7s26d7
+110 Darmstadtium [Rn]7s26d8
+111 Roentgenium [Rn]7s26d9
+112 Copernium [Rn]7s26d10
+113 Nihonium [Rn]7s27p1
+114 Flerovium [Rn]7s27p2
+115 Moscovium [Rn]7s27p3
+116 Livermorium [Rn]7s27p4
+117 Tennessine [Rn]7s27p5
+118 Oganesson [Rn]7s27p6
+
+
+2s1
+3s1
+4s1
+37
+Rb
+5s1
+55
+Cs
+6s1
+87
+Fr
+7s1
+4
+Be
+2s2
+12
+Mg
+3s2
+20
+Ca
+4s2
+38
+Sr
+5s2
+56
+Ba
+6s2
+88
+Ra
+7s2
+21
+Sc
+4s23d1
+39
+Y
+5s24d1
+57
+La
+6s25d1
+89
+Ac
+7s26d1
+22
+Ti
+4s23d2
+40
+Zr
+5s24d2
+72
+Hf
+6s25d2
+23
+V
+4s23d3
+41
+Nb
+5s14d4
+73
+Ta
+6s25d3
+24
+Cr
+4s13d5
+42
+Mo
+5s14d5
+74
+W
+6s25d4
+25
+Mn
+4s23d5
+43
+Tc
+5s24d5
+75
+Re
+6s25d5
+26
+Fe
+4s23d6
+44
+Ru
+5s14d7
+76
+Os
+6s25d6
+27
+Co
+4s23d7
+45
+Rh
+5s14d8
+77
+Ir
+6s25d7
+104
+Rf
+7s26d2
+105
+Db
+7s26d3
+106
+Sg
+7s26d4
+107
+Bh
+7s26d5
+108
+Hs
+7s26d6
+109
+Mt
+7s26d7
+110
+Ds
+7s26d8
+111
+Rg
+7s26d9
+112
+7s26d10
+114
+7s27p2
+113
+7s27p1
+115
+7s27p3
+118
+7s27p6
+116
+7s27p4
+(117)
+28
+Ni
+4s23d8
+46
+Pd
+4d10
+78
+Pt
+6s15d9
+29
+Cu
+4s13d10
+47
+Ag
+5s14d10
+79
+Au
+6s15d10
+30
+Zn
+4s23d10
+48
+Cd
+5s24d10
+80
+Hg
+6s25d10
+31
+Ga
+4s24p1
+49
+In
+5s25p1
+81
+Tl
+6s26p1
+32
+Ge
+4s24p2
+50
+Sn
+5s25p2
+82
+Pb
+6s26p2
+33
+As
+4s24p3
+51
+Sb
+5s25p3
+83
+Bi
+6s26p3
+34
+Se
+4s24p4
+52
+Te
+5s25p4
+84
+Po
+6s26p4
+35
+Br
+4s24p5
+53
+I 5s25p5
+85
+At
+6s26p5
+13
+Al
+3s23p1
+14
+Si
+3s23p2
+15
+P
+3s23p3
+16
+S 3s23p4
+17
+Cl
+3s23p5
+5
+B
+2s22p1
+6
+C
+2s22p2
+7
+N
+2s22p3
+8
+O
+2s22p4
+9
+F
+2s22p5
+10
+Ne
+2s22p6
+2
+He
+1s2
+18
+Ar
+3s23p6
+36
+Kr
+4s24p6
+54
+Xe
+5s25p6
+86
+Rn
+6s26p6
+1
+2
+3
+4
+5
+6
+7
+1
+H

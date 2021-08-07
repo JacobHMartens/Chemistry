@@ -1,0 +1,396 @@
+Aluminium(s) Al(s) 0
+Aluminium chloride(s) AlCl3(s) -705.63
+Aluminium oxide(s) Al2O3(s) -1675.5
+Aluminium hydroxide(s) Al(OH)3(s) -1277
+Aluminium sulphate(s) Al2(SO4)3(s) -3440
+Barium chloride(s) BaCl2(s) -858.6
+Barium carbonate(s) BaCO3(s) -1216
+Barium hydroxide(s) Ba(OH)2(s) -944.7
+Barium oxide(s) BaO(s) -548.1
+Barium sulfate(s) BaSO4(s) -1473.2
+Beryllium(s) Be(s) 0
+Beryllium hydroxide(s) Be(OH)2(s) -903
+Beryllium oxide(s) BeO(s) -609.4
+Boron trichloride(s) BCl3(s) -402.96
+Bromine(l) Br2(l) 0
+Bromide ion(aq) Br(-)(aq) -121
+Bromine(g) Br(g) 111.884
+Bromine(g) Br2(g) 30.91
+Bromine trifluoride(g) BrF3(g) -255.60
+Hydrogen bromide(g) HBr(g) -36.29
+Cadmium(s) Cd(s) 0
+Cadmium oxide(s) CdO(s) -258
+Cadmium hydroxide(s) Cd(OH)2(s) -561
+Cadmium sulfide(s) CdS(s) -162
+Cadmium sulfate(s) CdSO4(s) -935
+Calcium(s) Ca(s) 0
+Calcium(g) Ca(g) 178.2
+Calcium(II) ion(g) Ca(2+)(g) 1925.90
+Calcium carbide(s) CaC2(s) -59.8
+Calcium carbonate (Calcite)(s) CaCO3(s) -1206.9
+Calcium chloride(s) CaCl2(s) -795.8
+Calcium chloride(aq) CaCl2(aq) -877.3
+Calcium phosphate(s) Ca3(PO4)2(s) -4132
+Calcium fluoride(s) CaF2(s) -1219.6
+Calcium hydride(s) CaH2(s) -186.2
+Calcium hydroxide(s) Ca(OH)2(s) -986.09
+Calcium hydroxide(aq) Ca(OH)2(aq) -1002.82
+Calcium oxide(s) CaO(s) -635.09
+Calcium sulfate(s) CaSO4(s) -1434.52
+Calcium sulfide(s) CaS(s) -482.4
+Wollastonite(s) CaSiO3(s) -1630
+Caesium(s) Cs(s) 0
+Caesium(g) Cs(g) 76.50
+Caesium(l) Cs(l) 2.09
+Caesium(I) ion(g) Cs(+)(g) 457.964
+Caesium chloride(s) CsCl(s) -443.04
+Carbon (Graphite)(s) C(s) 0
+Carbon (Diamond)(s) C(s) 1.9
+Carbon(g) C(g) 716.67
+Carbon dioxide(g) CO2(g) -393.509
+Carbon disulfide(l) CS2(l) 89.41
+Carbon disulfide(g) CS2(g) 116.7
+Carbon monoxide(g) CO(g) -110.525
+Carbonyl chloride (Phosgene)(g) COCl2(g) -218.8
+Carbon dioxide (un–ionized)(aq) CO2(aq) -419.26
+Bicarbonate ion(aq) HCO3(–)(aq) -689.93
+Carbonate ion(aq) CO3(2–)(aq) -675.23
+Monatomic chlorine(g) Cl(g) 121.7
+Chloride ion(aq) Cl(-)(aq) -167.2
+Chlorine(g) Cl2(g) 0
+Chromium(s) Cr(s) 0
+Copper(s) Cu(s) 0
+Copper(II) oxide(s) CuO(s) -155.2
+Copper(II) sulfate(aq) CuSO4(aq) -769.98
+Fluorine(g) F2(g) 0
+Monatomic hydrogen(g) H(g) 218
+Hydrogen(g) H2(g) 0
+Water(g) H2O(g) -241.818
+Water(l) H2O(l) -285.8
+Hydrogen ion(aq) H(+)(aq) 0
+Hydroxide ion(aq) OH(-)(aq) -230
+Hydrogen peroxide(l) H2O2(l) -187.8
+Phosphoric acid(l) H3PO4(l) -1288
+Hydrogen cyanide(g) HCN(g) 130.5
+Hydrogen bromide(l) HBr(l) -36.3
+Hydrogen chloride(g) HCl(g) -92.30
+Hydrogen chloride(aq) HCl(aq) -167.2
+Hydrogen fluoride(g) HF(g) -273.3
+Hydrogen iodide(g) HI(g) 26.5
+Iodine(s) I2(s) 0
+Iodine(g) I2(g) 62.438
+Iodine(aq) I2(aq) 23
+Iodide ion(aq) I(-)(aq) -55
+Iron(s) Fe(s) 0
+Iron carbide (Cementite)(s) Fe3C(s) 5.4
+Iron(II) carbonate (Siderite)(s) FeCO3(s) -750.6
+Iron(III) chloride(s) FeCl3(s) -399.4
+Iron(II) oxide (Wüstite)(s) FeO(s) -272
+Iron(II,III) oxide (Magnetite)(s) Fe3O4(s) -1118.4
+Iron(III) oxide (Hematite)(s) Fe2O3(s) -824.2
+Iron(II) sulfate(s) FeSO4(s) -929
+Iron(III) sulfate(s) Fe2(SO4)3(s) -2583
+Iron(II) sulfide(s) FeS(s) -102
+Pyrite(s) FeS2(s) -178
+Lead(s) Pb(s) 0
+Lead dioxide(s) PbO2(s) -277
+Lead sulfide(s) PbS(s) -100
+Lead sulfate(s) PbSO4(s) -920
+Lead(II) nitrate(s) Pb(NO3)2(s) -452
+Lead(II) sulfate(s) PbSO4(s) -920
+Lithium fluoride(s) LiF(s) -616.93
+Magnesium(s) Mg(s) 0
+Magnesium ion(aq) Mg(2+)(aq) -466.85
+Magnesium carbonate(s) MgCO3(s) -1095.797
+Magnesium chloride(s) MgCl2(s) -641.8
+Magnesium hydroxide(s) Mg(OH)2(s) -924.54
+Magnesium hydroxide(aq) Mg(OH)2(aq) -926.8
+Magnesium oxide(s) MgO(s) -601.6
+Magnesium sulfate(s) MgSO4(s) -1278.2
+Manganese(s) Mn(s) 0
+Manganese(II) oxide(s) MnO(s) -384.9
+Manganese(IV) oxide(s) MnO2(s) -519.7
+Manganese(III) oxide(s) Mn2O3(s) -971
+Manganese(II,III) oxide(s) Mn3O4(s) -1387
+Permanganate(aq) MnO4(-)(aq) -543
+Mercury(II) oxide (red)(s) HgO(s) -90.83
+Mercury sulfide (red, cinnabar)(s) HgS(s) -58.2
+Nitrogen(g) N2(g) 0
+Ammonia (ammonium hydroxide)(aq) NH3(aq) (NH4OH) -80.8
+Ammonia(g) NH3(g) -46.1
+Ammonium nitrate(s) NH4NO3(s) -365.6
+Ammonium chloride(s) NH4Cl(s) -314.55
+Nitrogen dioxide(g) NO2(g) 33.2
+Hydrazine(g) N2H4(g) 95.4
+Hydrazine(l) N2H4(l) 50.6
+Nitrous oxide(g) N2O(g) 82.05
+Nitric oxide(g) NO(g) 90.29
+Dinitrogen tetroxide(g) N2O4(g) 9.16
+Dinitrogen pentoxide(s) N2O5(s) -43.1
+Dinitrogen pentoxide(g) N2O5(g) 11.3
+Nitric acid(aq) HNO3(aq) -207
+Monatomic oxygen(g) O(g) 249
+Oxygen(g) O2(g) 0
+Ozone(g) O3(g) 143
+White phosphorus(s) P4(s) 0
+Red phosphorus(s) P(s) -17.4
+Black phosphorus(s) P(s) -39.3
+Phosphorus trichloride(l) PCl3(l) -319.7
+Phosphorus trichloride(g) PCl3(g) -278
+Phosphorus pentachloride(s) PCl5(s) -440
+Phosphorus pentachloride(g) PCl5(g) -321
+Phosphorus pentoxide(s) P2O5(s) -1505.5
+Potassium bromide(s) KBr(s) -392.2
+Potassium carbonate(s) K2CO3(s) -1150
+Potassium chlorate(s) KClO3(s) -391.4
+Potassium chloride(s) KCl(s) -436.68
+Potassium fluoride(s) KF(s) -562.6
+Potassium oxide(s) K2O(s) -363
+Potassium perchlorate(s) KClO4(s) -430.12
+Silicon(g) Si(g) 368.2
+Silicon carbide(s) SiC(s) -74.4
+Silicon tetrachloride(l) SiCl4(l) -640.1
+Silica (Quartz)(s) SiO2(s) -910.86
+Silver bromide(s) AgBr(s) -99.5
+Silver chloride(s) AgCl(s) -127.01
+Silver iodide(s) AgI(s) -62.4
+Silver oxide(s) Ag2O(s) -31.1
+Silver sulfide(s) Ag2S(s) -31.8
+Sodium(s) Na(s) 0
+Sodium(g) Na(g) 107.5
+Sodium bicarbonate(s) NaHCO3(s) -950.8
+Sodium carbonate(s) Na2CO3(s) -1130.77
+Sodium chloride(aq) NaCl(aq) -407.27
+Sodium chloride(s) NaCl(s) -411.12
+Sodium chloride(l) NaCl(l) -385.92
+Sodium chloride(g) NaCl(g) -181.42
+Sodium chlorate(s) NaClO3(s) -365.4
+Sodium fluoride(s) NaF(s) -569.0
+Sodium hydroxide(aq) NaOH(aq) -469.15
+Sodium hydroxide(s) NaOH(s) -425.93
+Sodium hypochlorite(s) NaOCl(s) -347.1
+Sodium nitrate(aq) NaNO3(aq) -446.2
+Sodium nitrate(s) NaNO3(s) -424.8
+Sodium oxide(s) Na2O(s) -414.2
+Sulfur (monoclinic)(s) S8(s) 0.3
+Sulfur (rhombic)(s) S8(s) 0
+Hydrogen sulfide(g) H2S(g) -20.63
+Sulfur dioxide(g) SO2(g) -296.84
+Sulfur trioxide(g) SO3(g) -395.7
+Sulfuric acid(l) H2SO4(l) -814
+Titanium(g) Ti(g) 468
+Titanium tetrachloride(g) TiCl4(g) -763.2
+Titanium tetrachloride(l) TiCl4(l) -804.2
+Titanium dioxide(s) TiO2(s) -944.7
+Zinc(g) Zn(g) 130.7
+Zinc chloride(s) ZnCl2(s) -415.1
+Zinc oxide(s) ZnO(s) -348.0
+Zinc sulfate(s) ZnSO4(s) -980.14
+Acetone(l) C3H6O(l) -248.4
+Benzene(l) C6H6(l) 48.95
+Benzoic acid(s) C7H6O2(s) -385.2
+Carbon tetrachloride(l) CCl4(l) -135.4
+Carbon tetrachloride(g) CCl4(g) -95.98
+Ethanol(l) C2H5OH(l) -277.0
+Ethanol(g) C2H5OH(g) -235.3
+Glucose(s) C6H12O6(s) -1271
+Isopropanol(g) C3H7OH(g) -318.1
+Methanol (methyl alcohol)(l) CH3OH(l) -238.4
+Methanol (methyl alcohol)(g) CH3OH(g) -201.0
+Methyl linoleate (Biodiesel)(g) C19H34O2(g) -356.3
+Sucrose(s) C12H22O11(s) -2226.1
+Trichloromethane (Chloroform)(l) CHCl3(l) -134.47
+Trichloromethane (Chloroform)(g) CHCl3(g) -103.18
+Vinyl chloride(s) C2H3Cl(s) -94.12
+Methane(s) CH4(s) -74.9
+Ethane(s) C2H6(s) -83.7
+Ethylene(s) C2H4(s) 52.5
+Acetylene(s) C2H2(s) 226.8
+Propane(s) C3H8(s) -104.6
+n-Butane(s) C4H10(s) -125.5
+n-Pentane(s) C5H12(s) -146.9
+n-Hexane(s) C6H14(s) -167.4
+n-Heptane(s) C7H16(s) -187.9
+n-Octane(s) C8H18(s) -208.4
+n-Nonane(s) C9H20(s) -229.3
+n-Decane(s) C10H22(s) -249.4
+Isobutane (methylpropane)(s) C4H10(s) -134.3
+Neopentane (dimethylpropane)(s) C5H12(s) -167.8
+Isopentane (methylbutane)(s) C5H12(s) -154.4
+2,2-Dimethylbutane(s) C6H14(s) -186.2
+2,3-Dimethylbutane(s) C6H14(s) -177.8
+2-Methylpentane (isohexane)(s) C6H14(s) -174.9
+3-Methylpentane(s) C6H14(s) -172.0
+2,2-Dimethylpentane(s) C7H16(s) -205.9
+2,2,3-Trimethylbutane(s) C7H16(s) -205.0
+3,3-Dimethylpentane(s) C7H16(s) -201.3
+2,3-Dimethylpentane(s) C7H16(s) -197.9
+2,4-Dimethylpentane(s) C7H16(s) -201.7
+2-Methylhexane(s) C7H16(s) -194.6
+3-Methylhexane(s) C7H16(s) -191.2
+3-Ethylpentane(s) C7H16(s) -189.5
+2,3-Dimethylhexane(s) C8H18(s) -230.5
+2,2,3,3-Tetramethylbutane(s) C8H18(s) -225.5
+2,2-Dimethylhexane(s) C8H18(s) -224.7
+2,2,4-Trimethylpentane (isooctane)(s) C8H18(s) -223.8
+2,5-Dimethylhexane(s) C8H18(s) -222.6
+2,2,3-Trimethylpentane(s) C8H18(s) -220.1
+3,3-Dimethylhexane(s) C8H18(s) -220.1
+2,4-Dimethylhexane(s) C8H18(s) -219.2
+2,3,4-Trimethylpentane(s) C8H18(s) -217.1
+2,3,3-Trimethylpentane(s) C8H18(s) -216.3
+2-Methylheptane(s) C8H18(s) -215.5
+3-Ethyl-3-Methylpentane(s) C8H18(s) -215.1
+3,4-Dimethylhexane(s) C8H18(s) -213.0
+3-Ethyl-2-Methylpentane(s) C8H18(s) -210.9
+3-Methylheptane(s) C8H18(s) -252.5
+2,2,4,4-Tetramethylpentane(s) C9H20(s) -241.8
+2,2,3,3-Tetramethylpentane(s) C9H20(s) -237.2
+2,2,3,4-Tetramethylpentane(s) C9H20(s) -236.8
+2,3,3,4-Tetramethylpentane(s) C9H20(s) -236.0
+3,3-Diethylpentane(s) C9H20(s) -233.0
+name Ag(+)(aq) 105.9
+name AgCl(s) -127.0
+name Al(s) 0
+name Al(3+)(aq) -524.7
+name Al2O3(s) -1669.8
+name Br2(l) 0
+name Br(-)(aq) -120.9
+name HBr(g) -36.2
+C(graphite)(s) C(s) 0
+C(diamond)(s) C(diamond) 1.90
+name CO(g) -110.5
+name CO2(g) -393.5
+name CO2(aq) -412.9
+name CO3(2-)(aq) -676.3
+name HCO3(-)(aq) -691.1
+name H2CO3(aq) -699.7
+name CS2(g) 115.3
+name CS2(l) 87.3
+name HCN(aq) 105.4
+name CN(-)(aq) 151.0
+name (NH2)2CO(s) -333.19
+name (NH2)2CO(aq) -319.2
+name Ca(s) 0
+name Ca(2+)(aq) -542.96
+name CaO(s) -635.6
+name Ca(OH)2(s) -986.6
+name CaF2(s) -1214.6
+name CaCl2(s) -794.96
+name CaSO4(s) -1432.69
+name CaCO3(s) -1206.9
+name Cl2(g) 0
+name Cl(-)(aq) -167.2
+name HCl(g) -92.3
+name Cu(s) 0
+name Cu(+)(aq) 51.88
+name Cu(2+)(aq) 64.39
+name CuO(s) -155.2
+name Cu2O(s) -166.69
+name CuS(s) -48.5
+name CuSO4(s) -769.86
+name F2(g) 0
+name F(-)(aq) -329.1
+name HF(g) -271.6
+name Fe(s) 0
+name Fe(2+)(aq) -87.86
+name Fe(3+)(aq) -47.7
+name FeO(s) -272.0
+name Fe2O3(s) -2822.2
+name Fe(OH)2(s) -568.19
+name Fe(OH)3(s) -824.25
+name H(g) 218.2
+name H2(g) 0
+name H(+)(aq) 0
+name OH(-)(aq) -229.94
+name H2O(g) -241.8
+name H2O(l) -285.8
+name H2O2(l) -187.6
+name I2(s) 0
+name I(-)(aq) 55.9
+name HI(g) 25.9
+name K(s) 0
+name K(+)(aq) -251.2
+name KOH(s) -425.85
+name KCl(s) -435.87
+name KClO3(s) -391.20
+name KClO4(s) -433.46
+name KBr(s) -392.17
+name KI(s) -327.65
+name KNO3(s) -492.7
+name Li(s) 0
+name Li(+)(aq) -278.46
+name Li2O(s) -595.8
+name LiOH(s) -487.2
+name Mg(s) 0
+name Mg(2+)(aq) -461.96
+name MgO(s) -601.8
+name Mg(OH)2(s) -924.66
+name MgCl2(s) -641.8
+name MgSO4(s) -1278.2
+name MgCO3(s) -1112.9
+name N2(g) 0
+name N3(-)(aq) 245.18
+name NH3(g) -46.3
+name NH4(+)(aq) -132.80
+name NH4Cl(s) -315.39
+name NH3(aq) -80.3
+name N2H4(l) 50.4
+name NO(g) 90.4
+name NO2(g) 33.85
+name N2O4(g) 9.66
+name N2O(g) 81.56
+name HNO3(aq) -207.4
+name Na(s) 0
+name Na(+)(aq) -239.66
+name Na2O(s) -415.89
+name NaCl(s) -411.0
+name NaI(s) -288.0
+name Na2SO4(s) -1384.49
+name NaNO3(s) -466.68
+name Na2CO3(s) -1130.9
+name NaHCO3(s) -947.68
+name O(g) 249.4
+name O2(g) 0
+name O3(aq) -12.09
+name O3(g) 142.2
+name P(white) 0
+name P(red) -18.4
+name PO4(3-)(aq) -1284.07
+name P4O10(s) -3012.48
+name PH3(g) 9.25
+name HPO4(2-)(aq) -1298.7
+name H2PO4(-)(aq) -1302.48
+name S(rhombic) 0
+name S(monoclinic) 0.30
+name SO2(g) -296.1
+name SO3(g) -395.2
+name SO3(2-)(aq) -624.25
+name SO4(2-)(aq) -907.5
+name H2S(g) -20.15
+name HSO3(-)(aq) -627.98
+name HSO4(-)(aq) -885.75
+name H2SO4(l) -811.3
+name H2SO4(aq) -909.3
+name SF6(g) -1096.2
+name Zn(s) 0
+name Zn(2+)(aq) -152.4
+name ZnO(s) -348.0
+name ZnCl2(s) -415.89
+name ZnS(s) -202.9
+name ZnSO4(s) -978.6
+name Acetic acid(l) CH3COOH -484.2
+name Acetaldehyde(g) CH3CHO -166.35
+name Acetone(l) CH3COCH3 -246.8
+name Acetylene(g) C2H2 226.6
+name Benzene(l) C6H6 49.04
+name Butane(g) C4H10 -124.7
+name Ethanol(l) C2H5OH -276.98
+name Ethane(g) C2H6 -84.7
+name Ethylene(g) C2H4 52.3
+name Formic acid(l) HCOOH -409.2
+name Glucose(s) C6H12O6 -1274.5
+name Methane(g) CH4 -74.85
+name Methanol(l) CH3OH -238.7
+name Propane(g) C3H8 -103.9
+name Sucrose(s) C12H22O11 -2221.7

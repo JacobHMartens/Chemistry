@@ -1,0 +1,137 @@
+name Ag(+)(aq) 73.9
+name AgCl(s) 96.1
+name Al(s) 28.3
+name Al(3+)(aq) -313.38
+name Al2O3(s) 50.99
+name Br2(l) 152.3
+name Br(-)(aq) 80.7
+name HBr(g) 198.48
+C(graphite)(s) C(s) 5.69
+C(diamond)(s) C(diamond) 2.4
+name CO(g) 197.9
+name CO2(g) 213.6
+name CO2(aq) 121.3
+name CO3(2-)(aq) -53.1
+name HCO3(-)(aq) 94.98
+name H2CO3(aq) 187.4
+name CS2(g) 237.8
+name CS2(l) 151.0
+name HCN(aq) 128.9
+name CN(-)(aq) 117.99
+name (NH2)2CO(s) 104.6
+name (NH2)2CO(aq) 173.85
+name Ca(s) 41.6
+name Ca(2+)(aq) -55.2
+name CaO(s) 39.8
+name Ca(OH)2(s) 76.2
+name CaF2(s) 68.87
+name CaCl2(s) 113.8
+name CaSO4(s) 106.69
+name CaCO3(s) 92.9
+name Cl2(g) 223.0
+name Cl(-)(aq) 56.5
+name HCl(g) 187.0
+name Cu(s) 33.3
+name Cu(+)(aq) 40.6
+name Cu(2+)(aq) -99.6
+name CuO(s) 43.5
+name Cu2O(s) 100.8
+name CuS(s) 66.5
+name CuSO4(s) 113.39
+name F2(g) 203.34
+name F(-)(aq) -9.6
+name HF(g) 173.5
+name Fe(s) 27.2
+name Fe(2+)(aq) -113.39
+name Fe(3+)(aq) -293.3
+name FeO(s) 60.8
+name Fe2O3(s) 90.0
+name Fe(OH)2(s) 79.5
+name H(g) 114.6
+name H2(g) 131.0
+name H(+)(aq) 0.0
+name OH(-)(aq) -10.5
+name H2O(g) 188.7
+name H2O(l) 69.9
+name I2(s) 116.7
+name I(-)(aq) 109.37
+name HI(g) 206.3
+name K(s) 63.6
+name K(+)(aq) 102.5
+name KCl(s) 82.68
+name KClO3(s) 142.97
+name KClO4(s) 151.0
+name KBr(s) 96.4
+name KI(s) 104.35
+name KNO3(s) 132.9
+name Li(s) 28.0
+name Li(+)(aq) 14.2
+name LiOH(s) 50.2
+name Mg(s) 32.5
+name Mg(2+)(aq) -117.99
+name MgO(s) 26.78
+name Mg(OH)2(s) 63.1
+name MgCl2(s) 89.5
+name MgSO4(s) 91.6
+name MgCO3(s) 65.69
+name N2(g) 191.5
+name NH3(g) 193.0
+name NH4(+)(aq) 112.8
+name NH4Cl(s) 94.56
+name NH3(aq) 111.3
+name NO(g) 210.6
+name NO2(g) 240.46
+name N2O4(g) 304.3
+name N2O(g) 219.99
+name HNO3(aq) 146.4
+name Na(s) 51.05
+name Na(+)(aq) 60.25
+name Na2O(s) 72.8
+name NaCl(s) 72.38
+name Na2SO4(s) 149.49
+name NaNO3(s) 116.3
+name Na2CO3(s) 135.98
+name NaHCO3(s) 102.09
+name O(g) 160.95
+name O2(g) 205.0
+name O3(aq) 110.88
+name O3(g) 237.6
+name P(white) 44.0
+name P(red) 29.3
+name PO4(3-)(aq) -217.57
+name PH3(g) 210.0
+name HPO4(2-)(aq) -35.98
+name H2PO4(-)(aq) 89.1
+name S(rhombic) 31.88
+name S(monoclinic) 32.55
+name SO2(g) 248.5
+name SO3(g) 256.2
+name SO3(2-)(aq) 43.5
+name SO4(2-)(aq) 17.15
+name H2S(g) 205.64
+name HSO3(-)(aq) 132.38
+name HSO4(-)(aq) 126.86
+name H2SO4(l) 156.9
+name H2SO4(aq) 20.1
+name SF6(g) 291.8
+name Zn(s) 41.6
+name Zn(2+)(aq) -112.1
+name ZnO(s) 43.9
+name ZnCl2(s) 108.37
+name ZnS(s) 57.7
+name ZnSO4(s) 124.7
+name Acetic acid(l) CH3COOH 159.8
+name Acetaldehyde(g) CH3CHO 264.2
+name Acetone(l) CH3COCH3 198.7
+name Acetylene(g) C2H2 200.8
+name Benzene(l) C6H6 172.8
+name Butane(g) C4H10 310.0
+name Ethanol(l) C2H5OH 161.0
+name Ethane(g) C2H6 229.5
+name Ethylene(g) C2H4 219.5
+name Formic acid(l) HCOOH 129.0
+name Glucose(s) C6H12O6 212.1
+name Methane(g) CH4 186.2
+name Methanol(l) CH3OH 126.8
+name Propane(g) C3H8 269.9
+name Sucrose(s) C12H22O11 360.2

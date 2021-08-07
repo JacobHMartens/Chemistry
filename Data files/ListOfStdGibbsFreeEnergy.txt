@@ -1,0 +1,234 @@
+Aluminum(s) Al(s) 0
+Aluminum chloride(s) AlCl3(s) -628.9
+Aluminum oxide(s) Al2O3(s) -1582.3
+Barium(s) Ba(s) 0
+Barium chloride(s) BaCl2(s) -806.7
+Barium carbonate(s) BaCO3(s) -1134.4
+Barium oxide(s) BaO(s) -520.4
+Barium sulfate(s) BaSO4(s) -1362.2
+Beryllium(s) Be(s) 0
+Beryllium hydroxide(s) Be(OH)2(s) -815.0
+Boron trichloride(s) BCl3(s) -388.7
+Bromine(l) Br2(l) 0
+Bromine trifluoride(g) BrF3(g) -229.4
+Hydrobromic acid(g) HBr(g) -53.4
+Calcium(s) Ca(s) 0
+Calcium carbide(s) CaC2(s) -64.9
+Calcium carbonate (Calcite)(s) CaCO3(s) -1129.1
+Calcium chloride(s) CaCl2(s) -748.8
+Calcium chloride(aq) CaCl2(aq) -816.05
+Calcium hydride(s) CaH2(s) -142.5
+Calcium hydroxide(s) Ca(OH)2(s) -897.5
+Calcium oxide(s) CaO(s) -603.3
+Calcium sulfate(s) CaSO4(s) -1309.1
+Calcium sulfide(s) CaS(s) -477.4
+Carbon (graphite)(s) C(s) 0
+Carbon (diamond)(s) C(s) 2.900
+Carbon dioxide(g) CO2(g) -394.39
+Carbonic acid(aq) H2CO3(aq) -623.1
+Bicarbonate(aq) HCO3(-)(aq) -586.85
+Carbonate ion(aq) CO3(2-)(aq) -527.8
+Carbon disulfide(g) CS2(g) 67.1
+Carbon monoxide(g) CO(g) -137.16
+Glucose(s) C6H12O6(s) -910.56
+Ethanol(l) C2H5OH(l) -174.8
+Carbonyl chloride (phosgene)(g) COCl2(g) -204.9
+Caesium(s) Cs(s) 0
+Caesium chloride(s) CsCl(s) -414.4
+Chlorine(g) Cl2(g) 0
+Chromium(s) Cr(s) 0
+Copper(s) Cu(s) 0
+Copper(I) sulfide(s) Cu2S(s) -86.2
+Fluorine(g) F2(g) 0
+Hydrogen(g) H2(g) 0
+Water(l) H2O(l) -237.14
+Water(g) H2O(g) -228.61
+Hydrogen peroxide(l) H2O2(l) -120.42
+Hydrogen cyanide(g) HCN(g) +124.7
+Hydrogen iodide(g) HI(g) +1.3
+Hydrogen fluoride(g) HF(g) -275.4
+Hydrogen chloride(g) HCl(g) -95.30
+Iodine(s) I2(s) 0
+Iodine(g) I2(g) 19.37
+Magnesium carbonate(s) MgCO3(s) -1012.1
+Magnesium chloride(s) MgCl2(s) -591.8
+Magnesium hydroxide(s) Mg(OH)2(s) -833.7
+Magnesium hydroxide(aq) Mg(OH)2(aq) -769.4
+Magnesium oxide(s) MgO(s) -596.3
+Magnesium sulfate(s) MgSO4(s) -1170.6
+Manganese(II) oxide(s) MnO(s) -362.9
+Manganese(IV) oxide(s) MnO2(s) -465.2
+Mercury(II) oxide (red)(s) HgO(s) -58.49
+Mercury sulfide (red, cinnabar)(s) HgS(s) -50.6
+Ammonia(aq) NH3(aq) -26.57
+Ammonia(g) NH3(g) -16.4
+Ammonium chloride(s) NH4Cl(s) -203.89
+Nitrogen dioxide(g) NO2(g) 51.3
+Nitrogen monoxide(g) NO(g) 87.60
+Monatomic oxygen(g) O(g) 231.7
+Dioxygen(g) O2(g) 0
+Ozone(g) O3(g) 163.2
+Hydroxide(aq) OH(-)(aq) -157.2
+Phosphorus trichloride(l) PCl3(l) -272.4
+Potassium bromide(s) KBr(s) -380.7
+Potassium chlorate(s) KClO3(s) -296.31
+Potassium chloride(s) KCl(s) -408.5
+Potassium fluoride(s) KF(s) -537.8
+Potassium perchlorate(s) KClO4(s) -303.1
+Silica (quartz)(s) SiO2(s) -856.4
+Silver bromide(s) AgBr(s) -96.90
+Silver chloride(s) AgCl(s) -109.8
+Silver iodide(s) AgI(s) -66.19
+Silver oxide(s) Ag2O(s) -11.21
+Silver sulfide(s) Ag2S(s) -40.67
+Sodium carbonate(s) Na2CO3(s) -1044.4
+Sodium carbonate(aq) Na2CO3(aq) -1051.6
+Sodium chloride(aq) NaCl(aq) -393.17
+Sodium chloride(s) NaCl(s) -384.1
+Sodium fluoride(s) NaF(s) -546.3
+Sodium hydroxide(aq) NaOH(aq) -419.2
+Sodium hydroxide(s) NaOH(s) -379.4
+Sodium nitrate(aq) NaNO3(aq) -373.21
+Sodium nitrate(s) NaNO3(s) -367.06
+Hydrogen sulfide(g) H2S(g) -33.4
+Sulfur dioxide(g) SO2(g) -300.13
+Sulfur trioxide(g) SO3(g) -370.4
+Sulfuric acid(l) H2SO4(l) -689.9
+name Ag(+)(aq) 77.1
+name AgCl(s) 2109.7
+name Al(s) 0
+name Al(3+)(aq) -481.2
+name Al2O3(s) -1576.4
+name Br2(l) 0
+name Br(-)(aq) -102.8
+name HBr(g) -53.2
+C(graphite)(s) C(s) 0
+C(diamond)(s) C(diamond) 2.87
+name CO(g) -137.3
+name CO2(g) -394.4
+name CO2(aq) -386.2
+name CO3(2-)(aq) -528.1
+name HCO3(-)(aq) -587.1
+name H2CO3(aq) -623.2
+name CS2(g) 65.1
+name CS2(l) 63.6
+name HCN(aq) 112.1
+name CN(-)(aq) 165.69
+name (NH2)2CO(s) -197.15
+name (NH2)2CO(aq) -203.84
+name Ca(s) 0
+name Ca(2+)(aq) -553.0
+name CaO(s) -604.2
+name Ca(OH)2(s) -896.8
+name CaF2(s) -1161.9
+name CaCl2(s) -750.19
+name CaSO4(s) -1320.3
+name CaCO3(s) -1128.8
+name Cl2(g) 0
+name Cl(-)(aq) -131.2
+name HCl(g) -95.27
+name Cu(s) 0
+name Cu(+)(aq) 50.2
+name Cu(2+)(aq) 64.98
+name CuO(s) -127.2
+name Cu2O(s) -146.36
+name CuS(s) -49.0
+name CuSO4(s) -661.9
+name F2(g) 0
+name F(-)(aq) -276.48
+name HF(g) -270.7
+name Fe(s) 0
+name Fe(2+)(aq) -84.9
+name Fe(3+)(aq) -10.5
+name FeO(s) -255.2
+name Fe2O3(s) -741.0
+name Fe(OH)2(s) -483.55
+name H(g) 203.2
+name H2(g) 0
+name H(+)(aq) 0
+name OH(-)(aq) -157.30
+name H2O(g) -228.6
+name H2O(l) -237.2
+name H2O2(l) -118.1
+name I2(s) 0
+name I(-)(aq) 51.67
+name HI(g) 1.30
+name K(s) 0
+name K(+)(aq) -282.28
+name KCl(s) -408.3
+name KClO3(s) -289.9
+name KClO4(s) -304.18
+name KBr(s) -379.2
+name KI(s) -322.29
+name KNO3(s) -393.1
+name Li(s) 0
+name Li(+)(aq) -293.8
+name LiOH(s) -443.9
+name Mg(s) 0
+name Mg(2+)(aq) -456.0
+name MgO(s) -569.6
+name Mg(OH)2(s) -833.75
+name MgCl2(s) -592.3
+name MgSO4(s) -1173.6
+name MgCO3(s) -1029.3
+name N2(g) 0
+name NH3(g) -16.6
+name NH4(+)(aq) -79.5
+name NH4Cl(s) -203.89
+name NH3(aq) -263.76
+name NO(g) 86.7
+name NO2(g) 51.8
+name N2O4(g) 98.29
+name N2O(g) 103.6
+name HNO3(aq) -111.3
+name Na(s) 0
+name Na(+)(aq) -261.87
+name Na2O(s) -376.56
+name NaCl(s) -384.0
+name Na2SO4(s) -1266.8
+name NaNO3(s) -365.89
+name Na2CO3(s) -1047.67
+name NaHCO3(s) -851.86
+name O(g) 230.1
+name O2(g) 0
+name O3(aq) 16.3
+name O3(g) 163.4
+name P(white) 0
+name P(red) 13.8
+name PO4(3-)(aq) -1025.59
+name PH3(g) 18.2
+name HPO4(2-)(aq) -1094.1
+name H2PO4(-)(aq) -1135.1
+name S(rhombic) 0
+name S(monoclinic) 0.10
+name SO2(g) -300.4
+name SO3(g) -370.4
+name SO3(2-)(aq) -497.06
+name SO4(2-)(aq) -741.99
+name H2S(g) -33.0
+name HSO3(-)(aq) -527.3
+name HSO4(-)(aq) -752.87
+name H2SO4(l) -690.0
+name H2SO4(aq) -744.5
+name SF6(g) -1105.3
+name Zn(s) 0
+name Zn(2+)(aq) -147.2
+name ZnO(s) -318.2
+name ZnCl2(s) -369.26
+name ZnS(s) -198.3
+name ZnSO4(s) -871.6
+name Acetic acid(l) CH3COOH -389.45
+name Acetaldehyde(g) CH3CHO -139.08
+name Acetone(l) CH3COCH3 -153.55
+name Acetylene(g) C2H2 209.2
+name Benzene(l) C6H6 124.5
+name Butane(g) C4H10 -15.7
+name Ethanol(l) C2H5OH -174.18
+name Ethane(g) C2H6 -32.89
+name Ethylene(g) C2H4 68.1
+name Formic acid(l) HCOOH -346.0
+name Glucose(s) C6H12O6 -910.56
+name Methane(g) CH4 -50.8
+name Methanol(l) CH3OH -166.3
+name Propane(g) C3H8 -23.5
+name Sucrose(s) C12H22O11 -1544.3
