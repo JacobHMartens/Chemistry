@@ -1,96 +1,133 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class DataReader {
 	
-	public static Map<String, String> nameToSymbol;
-	public static Map<String, Integer> nameToAtomicNumber;
+	private static Scanner dataReader;
+	
+	/*
+	 * Data maps
+	 */
+	
+	// Chemical elements
+	public static Map<String, String> nameToSymbol = new HashMap<String, String>();
+	public static Map<String, Integer> nameToAtomicNumber = new HashMap<String, Integer>();
+	public static Map<String, Double> nameToMolarMass = new HashMap<String, Double>();
+	
+	public static Map<String, String> symbolToName = new HashMap<String, String>();
+	public static Map<String, Integer> symbolToAtomicNumber = new HashMap<String, Integer>();
+	public static Map<String, Double> symbolToMolarMass = new HashMap<String, Double>();
+	                       
+	public static Map<Integer, String> atomicNumberToName = new HashMap<Integer, String>();
+	public static Map<Integer, String> atomicNumberToSymbol = new HashMap<Integer, String>();
+	public static Map<Integer, Double> atomicNumberToMolarMass = new HashMap<Integer, Double>();
+	
+	// Acids and bases
+	public static Map<String, String> acidBaseNameToFormula = new HashMap<String, String>();
+	public static Map<String, String> acidBaseFormulaToName = new HashMap<String, String>();
+	
+	// Ions
+	public static Map<String, String> ionsFormulaToName = new HashMap<String, String>();
+	public static Map<String, String> ionsNameToFormula = new HashMap<String, String>();
+	
+	// Std. enthalpies, std. entropies and std. Gibbs free energy
+	public static Map<String, Double> formulaToEnthalpy = new HashMap<String, Double>();
+	public static Map<String, Double> formulaToEntropy = new HashMap<String, Double>();
+	public static Map<String, Double> formulaToGibbs = new HashMap<String, Double>();
+	
+	// Electronic configurations
+	public static Map<Integer, String> atomicNumberToElectroConfig = new HashMap<Integer, String>();
+	public static Map<String, String> nameToElectroConfig = new HashMap<String, String>();
 
-	public static void main(String[] args) {
+	public static void loadData() throws FileNotFoundException {
+		readElements();
+		readAcidsBases();
+		readIons();
+		readStdEnthalpies();
+		readStdEntropies();
+		readStdGibbsFreeEnergy();
+		readElectronicConfigurations();
+	}
+	
+	private static void readElements() throws FileNotFoundException {
+		File file = new File("Data files/ListOfElements.txt");
+		dataReader = new Scanner(file);
 		
+		String name, symbol;
+		int atomicNumber;
+		double molarMass;
+		
+		while (dataReader.hasNextLine()) {
+			// Split data
+			String[] data = dataReader.nextLine().split(" ");
+			
+			// Read data fields
+			name = data[0].toUpperCase();
+			symbol = data[1];
+			atomicNumber = Integer.valueOf(data[2]);
+			molarMass = Double.valueOf(data[3]);
+			
+			// Load data into maps
+			nameToSymbol.put(name, symbol);
+			nameToAtomicNumber.put(name, atomicNumber);
+			nameToMolarMass.put(name, molarMass);
+			
+			symbolToName.put(symbol, name);
+			symbolToAtomicNumber.put(symbol, atomicNumber);
+			symbolToMolarMass.put(symbol, molarMass);
+					                        
+			atomicNumberToName.put(atomicNumber, name);
+			atomicNumberToSymbol.put(atomicNumber, symbol);
+			atomicNumberToMolarMass.put(atomicNumber, molarMass);
+		}
+		dataReader.close();
 	}
 	
-	private static void readElements() {
-		/*
-		elementsFile = open("ListOfElements.txt", "r")
+	private static void readAcidsBases() throws FileNotFoundException {
+		File file = new File("Data files/ListOfAcidsBases.txt");
+		dataReader = new Scanner(file);
+		
+		String name, formula;
+		
+		while (dataReader.hasNextLine()) {
+			// Split data
+			String[] data = dataReader.nextLine().split(" ");
+			
+			// Read data fields
+			name = data[0].toUpperCase();
+			formula = data[1];
 
-				elementList = []
-				symbolList = []
-				atomicNumberList = []
-				molarMassList = []
-
-				for line in elementsFile:
-				    splitLine = line.split(" ")
-				    elementList.append(splitLine[0].upper())
-				    symbolList.append(splitLine[1])
-				    atomicNumberList.append(int(splitLine[2]))
-				    molarMassList.append(float(splitLine[3].replace("\n", "")))
-
-				elementsFile.close()
-
-				nameToSymbol = dict(zip(elementList, symbolList))
-				nameToAtomicNumber = dict(zip(elementList, atomicNumberList))
-				nameToMolarMass = dict(zip(elementList, molarMassList))
-
-				symbolToName = dict(zip(symbolList, elementList))
-				symbolToAtomicNumber = dict(zip(symbolList, atomicNumberList))
-				symbolToMolarMass = dict(zip(symbolList, molarMassList))
-
-				atomicNumberToName = dict(zip(atomicNumberList, elementList))
-				atomicNumberToSymbol = dict(zip(atomicNumberList, symbolList))
-				atomicNumberToMolarMass = dict(zip(atomicNumberList, molarMassList))
-		*/
+			// Load data into maps
+			acidBaseNameToFormula.put(name, formula);
+			acidBaseFormulaToName.put(formula, name);
+			
+		}
+		dataReader.close();
 	}
 	
-	private static void readAcidsBases() {
-		/*
-		acidBaseFile = open("ListOfAcidsBases.txt", "r")
+	private static void readIons() throws FileNotFoundException {
+		File file = new File("Data files/ListOfIons.txt");
+		dataReader = new Scanner(file);
+		
+		String name, formula;
+		
+		while (dataReader.hasNextLine()) {
+			// Split data
+			String[] data = dataReader.nextLine().split(" ");
+			
+			// Read data fields
+			name = data[0].toUpperCase();
+			formula = data[1];
 
-				acidBaseNameList = []
-				acidBaseFormulaList = []
-
-				for line in acidBaseFile:
-				    splitLine = line.split(" ")
-				    acidBaseNameList.append(splitLine[0])
-				    acidBaseFormulaList.append(splitLine[1].replace("\n", ""))
-
-				acidBaseFile.close()
-
-				acidBaseFormulaToName = dict(zip(acidBaseFormulaList, acidBaseNameList))
-				acidBaseNameToFormula = dict(zip(acidBaseNameList, acidBaseFormulaList))
-
-				# Manual changes
-				def addToAcidBase(formula, *names):
-				    namesAsString = ""
-				    for name in names:
-				        namesAsString += name + ", "
-				        acidBaseNameToFormula[name] = formula
-				    acidBaseFormulaToName[formula] = namesAsString[:-2]
-
-
-				addToAcidBase("CH3COOH", "ethansyre", "eddikesyre")
-				addToAcidBase("NaOH", "natriumhydroxid")
-				addToAcidBase("KOH", "kaliumhydroxid")
-		*/
-	}
-	
-	private static void readIons() {
-		/*
-		 ionsFile = open("ListOfIons.txt", "r")
-
-ionsNameList = []
-ionsFormulaList = []
-
-for line in ionsFile:
-    splitLine = line.split(" ")
-    ionsNameList.append(splitLine[0].lower())
-    ionsFormulaList.append(splitLine[1].replace("\n", ""))
-
-ionsFile.close()
-
-ionsFormulaToName = dict(zip(ionsFormulaList, ionsNameList))
-ionsNameToFormula = dict(zip(ionsNameList, ionsFormulaList))
-
-		 */
+			// Load data into maps
+			ionsNameToFormula.put(name, formula);
+			ionsFormulaToName.put(formula, name);
+			
+		}
+		dataReader.close();
 	}
 	
 	private static void readStdEnthalpies() {
