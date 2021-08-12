@@ -4,6 +4,9 @@ import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 
+import static handleData.DataReader.*;
+
+
 public class ResultProducer {
 	
 	private static double NAvigadro = 6.022 * Math.pow(10, 23);
@@ -70,33 +73,41 @@ public class ResultProducer {
 
 	    return formulaDict;
 	}
+
+	private static String getPrecedingNumbers(String str) {
+		String precedingNumbers = "";
+		for (int i=0; i < str.length(); i++) {
+			if (Character.isDigit(str.charAt(i)))
+				precedingNumbers += str.charAt(i);
+			else
+				break;
+		}
+		return str;
+	}
+	
+	public static int getAtomNumberFromElement(String formula) {
+		return symbolToAtomicNumber.get(formula);
+	}
+	
+	public static String getElementFromAtomNumber(int number) {
+		return atomicNumberToSymbol.get(number);
+	}
+	
+	public static double getMolarMassFromFormula(String formula) {
+		Map<String, Integer> formulaDict = splitFormula(formula);
+		double totalMass = 0;
+		for (Map.Entry<String, Integer> entry : formulaDict.entrySet()) {
+			totalMass += entry.getValue() * symbolToMolarMass.get(entry.getKey());
+		}
+		return totalMass;
+	}
+	    
+	    		
 }
 
 /*
-def getPrecedingNumbers(string):
-    precedingNumbers = ""
-    for i in string:
-        if i in numbers:
-            precedingNumbers += i
-        else:
-            break
-    return precedingNumbers
 
 
-def getAtomNumberFromElement(formula):
-    return Maps.symbolToAtomicNumber[formula]
-
-
-def getElementFromAtomNumber(number):
-    return Maps.atomicNumberToSymbol[number]
-
-
-def getMolarMassFromFormula(formula):
-    formulaDict = splitFormula(formula)
-    totalMass = 0
-    for elem, numb in formulaDict.items():
-        totalMass += numb*Maps.symbolToMolarMass[elem]
-    return totalMass
 
 
 def getMassPercentageFromFormula(element, formula):

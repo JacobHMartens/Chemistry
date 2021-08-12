@@ -1,5 +1,4 @@
 package main;
-import static handleData.DataReader.*;
 
 import java.io.FileNotFoundException;
 
