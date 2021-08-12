@@ -1,70 +1,78 @@
+package handleData;
+
 import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.Map;
 
-
-public class Result {
+public class ResultProducer {
 	
+	private static double NAvigadro = 6.022 * Math.pow(10, 23);
+	private static double KBolzmann = 1.38 * Math.pow(10, -23);
+	private static double stdTemp = 273.15 + 25;  // Kelvin
+	private static double stdPres = 1;  // bar
+	private static double RIdealGas = 0.082057;  // L*atm / K*mol
+	private static double RThermo = 8.314;  // J / K*mol
+	private static double hPlanck = 6.63 * Math.pow(10, -34);  // J*s
+	private static double c = 3.00 * Math.pow(10, 8);  // m/s
+	
+
 	public static void main(String[] args) throws FileNotFoundException {
 		DataReader.loadData();
 		
 	}
+	
+	private static Map<String, Integer> splitFormula(String formula) {
+		Map<String, Integer> formulaDict = new HashMap<String, Integer>();
+		String tmpAtom = "", tmpNumber = "";
+		int multiplier = 1;
+		int coef;
+		
+		while (formula.length() > 0) {
+			if (formula.startsWith("(")) {
+				int i = 0;
+				while (formula.charAt(i) == ')') {
+					i++;
+				}
+				int j = i+1;
+				while (Character.isDigit(formula.charAt(j)) && j < formula.length() - 1) {
+					j++;
+				}
+				multiplier = Integer.valueOf(formula.substring(i+1, j+1));
+			}
+			
+			else if (formula.startsWith(")")) {
+				multiplier = 1;
+			}
+			
+			else if (Character.isDigit(formula.charAt(0))) {
+				tmpNumber += formula.charAt(0);
+			}
+			
+			else {
+				if (Character.isUpperCase(formula.charAt(0)) && tmpAtom != "") {
+					if (tmpNumber.length() > 0)
+						coef = Integer.valueOf(tmpNumber.substring(1))*multiplier;
+					else
+						coef = 1*multiplier;
+					formulaDict.put(tmpAtom, coef);
+					tmpAtom = tmpNumber = "";
+				}
+				tmpAtom += formula.charAt(0);
+			}
+			formula = formula.substring(1);
+		}
+		
+		if (tmpNumber.length() > 0)
+			coef = Integer.valueOf(tmpNumber.substring(1))*multiplier;
+		else
+			coef = 1*multiplier;
+		formulaDict.put(tmpAtom, coef);
+
+	    return formulaDict;
+	}
 }
 
 /*
-import math
-
-import Maps
-
-numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-NAvigadro = 6.022 * (10**23)
-KBolzmann = 1.38 * (10**(-23))
-stdTemp = 273.15 + 25  # Kelvin
-stdPres = 1  # bar
-RIdealGas = 0.082057  # L*atm / K*mol
-RThermo = 8.314  # J / K*mol
-hPlanck = 6.63 * (10**(-34))  # J*s
-c = 3.00 * 10**8  # m/s
-
-
-def splitFormula(formula):
-    formulaDict = {}
-    tmpAtom = ""
-    tmpNumber = "1"
-    multiplier = 1
-    while len(formula) > 0:
-        if formula[0] == "(":
-            i = 0
-            while formula[i] != ")":
-                i += 1
-            j = i+1
-            while formula[j] in numbers and j < len(formula)-1:
-                j += 1
-            multiplier = int(formula[i+1:j+1])
-        elif formula[0] == ")":
-            multiplier = 1
-
-        elif formula[0] in numbers:
-            tmpNumber += formula[0]
-
-        else:
-            if formula[0].isupper() and tmpAtom != "":
-                if len(tmpNumber) > 1:
-                    formulaDict[tmpAtom] = int(tmpNumber[1:])*multiplier
-                else:
-                    formulaDict[tmpAtom] = int(tmpNumber)*multiplier
-                tmpAtom = ""
-                tmpNumber = "1"
-            tmpAtom += formula[0]
-        formula = formula[1:]
-
-    tmpAtom = tmpAtom[0].upper() + tmpAtom[1:].lower()
-    if len(tmpNumber) > 1:
-        formulaDict[tmpAtom] = int(tmpNumber[1:])
-    else:
-        formulaDict[tmpAtom] = int(tmpNumber)
-
-    return formulaDict
-
-
 def getPrecedingNumbers(string):
     precedingNumbers = ""
     for i in string:
