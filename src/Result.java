@@ -1,6 +1,12 @@
+import java.io.FileNotFoundException;
+
 
 public class Result {
-
+	
+	public static void main(String[] args) throws FileNotFoundException {
+		DataReader.loadData();
+		
+	}
 }
 
 /*
