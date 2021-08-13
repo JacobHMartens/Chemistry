@@ -25,7 +25,7 @@ hypochlorsyrling HClO
 hypobromsyrling HBrO
 borsyre H3BO3
 ammonium NH4+
-blÃ¥syre HCN
+blåsyre HCN
 hydrogencarbonat HCO3-
 hypoiodsyrling HIO
 hydrogenphosphat HPO42-
@@ -69,3 +69,7 @@ hydrogensulfit HSO3-
 hydrogencarbonat HCO3-
 hydrogenphosphat HPO42-
 hydrogensulfid HS-
+ethansyre CH3COOH
+eddikesyre CH3COOH
+natriumhydroxid NaOH
+kaliumhydroxid KOH
