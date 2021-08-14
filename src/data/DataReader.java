@@ -38,7 +38,7 @@ public class DataReader {
 	// Std. enthalpies, std. entropies and std. Gibbs free energy
 	public static Map<String, Double> formulaToEnthalpy = new HashMap<String, Double>();
 	public static Map<String, Double> formulaToEntropy = new HashMap<String, Double>();
-	public static Map<String, Double> formulaToGibbs = new HashMap<String, Double>();
+	public static Map<String, Double> formulaToGibbsFreeEnergy = new HashMap<String, Double>();
 	
 	// Electronic configurations
 	public static Map<Integer, String> atomicNumberToElectroConfig = new HashMap<Integer, String>();

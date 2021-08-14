@@ -4,7 +4,7 @@ import data.DataReader;
 import static data.DataReader.*;
 
 import static results.BaseOperations.splitFormula;
-import static results.Constants.*;
+import static results.Constants.NAvigadro;
 
 import java.io.FileNotFoundException;
 import java.util.Map;
