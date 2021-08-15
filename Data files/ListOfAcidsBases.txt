@@ -71,6 +71,7 @@ hydrogenphosphat HPO42-
 hydrogensulfid HS-
 ethansyre CH3COOH
 eddikesyre CH3COOH
+eddikesyre_eller_ethansyre CH3COOH
 natriumhydroxid NaOH
 kaliumhydroxid KOH
 myresyre HCOOH

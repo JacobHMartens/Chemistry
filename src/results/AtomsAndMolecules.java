@@ -13,12 +13,6 @@ import java.util.Map;
 public class AtomsAndMolecules {
 	
 	private static Map<String, Integer> formulaDict;
-		
-
-	public static void main(String[] args) throws FileNotFoundException {
-		DataReader.loadData();
-		
-	}
 	
 	public static int getAtomNumberFromElement(String formula) {
 		return symbolToAtomicNumber.get(formula);
@@ -42,11 +36,11 @@ public class AtomsAndMolecules {
 		return 100 * formulaDict.get(element) * getMolarMassFromFormula(element) / getMolarMassFromFormula(formula);
 	}
 	
-	public static String getAtomsFromAmountInFormula(String element, double amountInGrams, String formula) {
+	public static String getNumberOfAtomsFromMassOfFormula(String element, double amountInGrams, String formula) {
 		double grams = amountInGrams * getMassPercentageFromFormula(element, formula) / 100;
 		double moles = grams / getMolarMassFromFormula(element);
 		double atoms = moles * NAvigadro;
-		return String.valueOf(atoms).replace("e+", " x 10^");
+		return String.valueOf(atoms).replace("E", " x 10^");
 	}
 	
 	public static double getMassFromMole(String formula, double mole) {
@@ -55,6 +49,38 @@ public class AtomsAndMolecules {
 	
 	public static double getMolesFromMass(String formula, double mass) {
 	    return mass / getMolarMassFromFormula(formula);
+	}
+	
+	public static String getNameFromFormula(String formula) {
+		try {
+			return acidBaseFormulaToName.get(formula);
+		}
+		catch (Exception e) {
+		}
+		try {
+			return ionsFormulaToName.get(formula);
+		}
+		catch (Exception e2) {
+		}
+
+        System.out.println(String.format("Formula: %s not in data base", formula));
+		return null;
+	}
+	
+	public static String getFormulaFromName(String name) {
+		try {
+			return acidBaseNameToFormula.get(name.toLowerCase());
+		}
+		catch (Exception e) {
+		}
+		try {
+			return ionsNameToFormula.get(name.toLowerCase());
+		}
+		catch (Exception e2) {
+		}
+		
+		System.out.println(String.format("Name: %s not in data base", name));
+		return null;
 	}
 }
 
