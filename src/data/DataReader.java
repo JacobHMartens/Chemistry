@@ -132,106 +132,128 @@ public class DataReader {
 		dataReader.close();
 	}
 	
-	private static void readStdEnthalpies() {
-		/*
-		 enthalpyFile = open("ListOfStdEnthalpies.txt", "r")
-
-nameList = []
-formulaList = []
-enthalpyList = []
-
-for line in enthalpyFile:
-    splitLine = line.split(" ")
-    while len(splitLine) > 3:
-        splitLine[0] += " " + splitLine[1]
-        del splitLine[1]
-
-    nameList.append(splitLine[0].lower())
-    formulaList.append(splitLine[1])
-    enthalpyList.append(float(splitLine[2].replace("\n", "")))
-
-enthalpyFile.close()
-nameToEnthalpy = dict(zip(nameList, enthalpyList))
-formulaToEnthalpy = dict(zip(formulaList, enthalpyList))
-
-formulaToEnthalpy["K(+)(aq)"] = -251.2
-formulaToEnthalpy["K(s)"] = 0
-
-		 */
+	private static void readStdEnthalpies() throws FileNotFoundException {
+		File file = new File("Data files/ListOfStdEnthalpies.txt");
+		dataReader = new Scanner(file);
+		
+		// String name;
+		String formula;
+		double enthalpy;
+		
+		while (dataReader.hasNextLine()) {
+			// Split data
+			String[] data = dataReader.nextLine().split(" ");
+			
+			// Read data fields
+			while (data.length > 3) {
+				String[] tmpData = new String[data.length-1]; 
+				tmpData[0] = data[0] + " " + data[1];
+				for (int i=2; i < data.length; i++) {
+					tmpData[i-1] = data[i];
+				}
+				data = tmpData;
+			}
+			// name = data[0].toUpperCase();
+			formula = data[1];
+			enthalpy = Double.valueOf(data[2]);
+			
+			// Load data into maps
+			formulaToEnthalpy.put(formula, enthalpy);
+			
+		}
+		dataReader.close();
+		// Manual appendage
+		formulaToEnthalpy.put("K(+)(aq)", -251.2);
+		formulaToEnthalpy.put("K(s)", 0.);
 	}
 	
-	private static void readStdEntropies() {
-		/*
-		 entropyFile = open("ListOfStdEntropies.txt", "r")
-
-nameList = []
-formulaList = []
-entropyList = []
-
-for line in entropyFile:
-    splitLine = line.split(" ")
-    while len(splitLine) > 3:
-        splitLine[0] += " " + splitLine[1]
-        del splitLine[1]
-
-    nameList.append(splitLine[0].lower())
-    formulaList.append(splitLine[1])
-    entropyList.append(float(splitLine[2].replace("\n", "")))
-
-entropyFile.close()
-
-formulaToEntropy = dict(zip(formulaList, entropyList))
-
-
-		 */
+	private static void readStdEntropies() throws FileNotFoundException {
+		File file = new File("Data files/ListOfStdEntropies.txt");
+		dataReader = new Scanner(file);
+		
+		// String name;
+		String formula;
+		double entropy;
+		
+		while (dataReader.hasNextLine()) {
+			// Split data
+			String[] data = dataReader.nextLine().split(" ");
+			
+			// Read data fields
+			while (data.length > 3) {
+				String[] tmpData = new String[data.length-1]; 
+				tmpData[0] = data[0] + " " + data[1];
+				for (int i=2; i < data.length; i++) {
+					tmpData[i-1] = data[i];
+				}
+				data = tmpData;
+			}
+			// name = data[0].toUpperCase();
+			formula = data[1];
+			entropy = Double.valueOf(data[2]);
+			
+			// Load data into maps
+			formulaToEntropy.put(formula, entropy);
+			
+		}
+		dataReader.close();
 	}
 	
-	private static void readStdGibbsFreeEnergy() {
-		/*
-		 gibbsFile = open("ListOfStdGibbsFreeEnergy.txt", "r")
+	private static void readStdGibbsFreeEnergy() throws FileNotFoundException {
+		File file = new File("Data files/ListOfStdGibbsFreeEnergy.txt");
+		dataReader = new Scanner(file);
+		
+		// String name;
+		String formula;
+		double gibbs;
+		
+		while (dataReader.hasNextLine()) {
+			// Split data
+			String[] data = dataReader.nextLine().split(" ");
+			
+			// Read data fields
+			while (data.length > 3) {
+				String[] tmpData = new String[data.length-1]; 
+				tmpData[0] = data[0] + " " + data[1];
+				for (int i=2; i < data.length; i++) {
+					tmpData[i-1] = data[i];
+				}
+				data = tmpData;
+			}
+			// name = data[0].toUpperCase();
+			formula = data[1];
+			gibbs = Double.valueOf(data[2]);
+			
+			// Load data into maps
+			formulaToGibbsFreeEnergy.put(formula, gibbs);
+			
+		}
+		dataReader.close();
 
-nameList = []
-formulaList = []
-gibbsList = []
-
-for line in gibbsFile:
-    splitLine = line.split(" ")
-    while len(splitLine) > 3:
-        splitLine[0] += " " + splitLine[1]
-        del splitLine[1]
-
-    nameList.append(splitLine[0].lower())
-    formulaList.append(splitLine[1])
-    gibbsList.append(float(splitLine[2].replace("\n", "")))
-
-gibbsFile.close()
-nameToGibbs = dict(zip(nameList, gibbsList))
-formulaToGibbs = dict(zip(formulaList, gibbsList))
-
- 
-		 */
 	}
 	
-	private static void readElectronicConfigurations() {
-		/*
-		 electroConfigFile = open("ListOfElectronicConfig.txt", "r")
-
-atomicNumberList = []
-nameList = []
-electroConfigList = []
-
-for line in electroConfigFile:
-    splitLine = line.split(" ")
-
-    atomicNumberList.append(int(splitLine[0]))
-    nameList.append(splitLine[1].lower())
-    electroConfigList.append(splitLine[2].replace("\n", ""))
-
-electroConfigFile.close()
-
-atomicNumberToElectroConfig = dict(zip(atomicNumberList, electroConfigList))
-nameToElectroConfig = dict(zip(nameList, electroConfigList)) 
-		 */
+	private static void readElectronicConfigurations() throws FileNotFoundException {
+		File file = new File("Data files/ListOfElectronicConfig.txt");
+		dataReader = new Scanner(file);
+		
+		int atomicNumber;
+		String name, config;
+		
+		while (dataReader.hasNextLine()) {
+			// Split data
+			String[] data = dataReader.nextLine().split(" ");
+			
+			// Read data fields			
+			atomicNumber = Integer.valueOf(data[0]);
+			name = data[1].toUpperCase();
+			config = data[2];
+			
+			// Load data into maps
+			atomicNumberToElectroConfig.put(atomicNumber, config);
+			nameToElectroConfig.put(name, config);
+			
+		}
+		dataReader.close();
 	}
 
 }

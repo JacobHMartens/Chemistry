@@ -32,35 +32,38 @@ public class Thermodynamics {
 	
 	public static double getStdEnthalpyFromReaction(String[] reactants, String[] reactantPhases, String[] products, String[] productPhases) {
 		double reactantsSum = 0., productsSum = 0.;
+		String phase;
+		int coefficient, k;
 		for (int i=0; i < reactants.length; i++) {
 			String reactant = reactants[i];
-			String phase = reactantPhases[i];
-			int coefficient = 1;
-			int k = 0;
+			phase = reactantPhases[i];
+			coefficient = 1;
+			k = 0;
 			while (Character.isDigit(reactant.charAt(k))) {
-				k ++;
-			    if (k != 0) {
-			    	coefficient = Integer.valueOf((String) reactant.subSequence(0, k));
-			        reactant = reactant.substring(String.valueOf(coefficient).length());
-			        reactantsSum += coefficient * getStdEnthalpyFromFormulaAndPhase(reactant, phase);
-			    }
-			    for (int j=0; j < products.length; j++) {
-			        String product = products[j];
-			        phase = productPhases[j];
-			        coefficient = 1;
-			        k = 0;
-			        while (Character.isDigit(product.charAt(k))) {
-			            k ++;
-					}	
-			        if (k != 0) {
-			            coefficient = Integer.valueOf(product.substring(0, k));
-			            product = product.substring(String.valueOf(coefficient).length());
-			        }
-			        productsSum += coefficient * getStdEnthalpyFromFormulaAndPhase(product, phase);
-			    }
+				k++;
+			}
+			if (k != 0) {
+				coefficient = Integer.valueOf((String) reactant.subSequence(0, k));
+			    reactant = reactant.substring(String.valueOf(coefficient).length());
+			    reactantsSum += coefficient * getStdEnthalpyFromFormulaAndPhase(reactant, phase);
 			}
 		}
-			    return productsSum - reactantsSum;
+		for (int j=0; j < products.length; j++) {
+			String product = products[j];
+			phase = productPhases[j];
+			coefficient = 1;
+			k = 0;
+			while (Character.isDigit(product.charAt(k))) {
+				k++;
+			}	
+			if (k != 0) {
+				coefficient = Integer.valueOf(product.substring(0, k));
+				product = product.substring(String.valueOf(coefficient).length());
+			}
+			productsSum += coefficient * getStdEnthalpyFromFormulaAndPhase(product, phase);
+		}
+	
+	    return productsSum - reactantsSum;
 	}
 	
 	public static Double getStdEntropyFromFormulaAndPhase(String formula, String phase) {
@@ -76,36 +79,39 @@ public class Thermodynamics {
 	}
 	
 	public static double getStdEntropyFromReaction(String[] reactants, String[] reactantPhases, String[] products, String[] productPhases) {
-		double reactantsSum = 0, productsSum = 0;
+		double reactantsSum = 0., productsSum = 0.;
+		String phase;
+		int coefficient, k;
 		for (int i=0; i < reactants.length; i++) {
 			String reactant = reactants[i];
-			String phase = reactantPhases[i];
-			int coefficient = 1;
-			int k = 0;
+			phase = reactantPhases[i];
+			coefficient = 1;
+			k = 0;
 			while (Character.isDigit(reactant.charAt(k))) {
-				k ++;
-			    if (k != 0) {
-			    	coefficient = Integer.valueOf((String) reactant.subSequence(0, k));
-			        reactant = reactant.substring(String.valueOf(coefficient).length());
-			        reactantsSum += coefficient * getStdEntropyFromFormulaAndPhase(reactant, phase);
-			    }
-			    for (int j=0; j < products.length; j++) {
-			        String product = products[j];
-			        phase = productPhases[j];
-			        coefficient = 1;
-			        k = 0;
-			        while (Character.isDigit(product.charAt(k))) {
-			            k ++;
-					}	
-			        if (k != 0) {
-			            coefficient = Integer.valueOf(product.substring(0, k));
-			            product = product.substring(String.valueOf(coefficient).length());
-			        }
-			        productsSum += coefficient * getStdEntropyFromFormulaAndPhase(product, phase);
-			    }
+				k++;
+			}
+			if (k != 0) {
+				coefficient = Integer.valueOf((String) reactant.subSequence(0, k));
+			    reactant = reactant.substring(String.valueOf(coefficient).length());
+			    reactantsSum += coefficient * getStdEntropyFromFormulaAndPhase(reactant, phase);
 			}
 		}
-			    return productsSum - reactantsSum;
+		for (int j=0; j < products.length; j++) {
+			String product = products[j];
+			phase = productPhases[j];
+			coefficient = 1;
+			k = 0;
+			while (Character.isDigit(product.charAt(k))) {
+				k++;
+			}	
+			if (k != 0) {
+				coefficient = Integer.valueOf(product.substring(0, k));
+				product = product.substring(String.valueOf(coefficient).length());
+			}
+			productsSum += coefficient * getStdEntropyFromFormulaAndPhase(product, phase);
+		}
+	
+	    return productsSum - reactantsSum;
 	}
 	
 	public static Double getStdGibbsFreeEnergyFromFormulaAndPhase(String formula, String phase) {
@@ -121,36 +127,39 @@ public class Thermodynamics {
 	}
 	
 	public static double getStdGibbsFreeEnergyFromReaction(String[] reactants, String[] reactantPhases, String[] products, String[] productPhases) {
-		double reactantsSum = 0, productsSum = 0;
+		double reactantsSum = 0., productsSum = 0.;
+		String phase;
+		int coefficient, k;
 		for (int i=0; i < reactants.length; i++) {
 			String reactant = reactants[i];
-			String phase = reactantPhases[i];
-			int coefficient = 1;
-			int k = 0;
+			phase = reactantPhases[i];
+			coefficient = 1;
+			k = 0;
 			while (Character.isDigit(reactant.charAt(k))) {
-				k ++;
-			    if (k != 0) {
-			    	coefficient = Integer.valueOf((String) reactant.subSequence(0, k));
-			        reactant = reactant.substring(String.valueOf(coefficient).length());
-			        reactantsSum += coefficient * getStdGibbsFreeEnergyFromFormulaAndPhase(reactant, phase);
-			    }
-			    for (int j=0; j < products.length; j++) {
-			        String product = products[j];
-			        phase = productPhases[j];
-			        coefficient = 1;
-			        k = 0;
-			        while (Character.isDigit(product.charAt(k))) {
-			            k ++;
-					}	
-			        if (k != 0) {
-			            coefficient = Integer.valueOf(product.substring(0, k));
-			            product = product.substring(String.valueOf(coefficient).length());
-			        }
-			        productsSum += coefficient * getStdGibbsFreeEnergyFromFormulaAndPhase(product, phase);
-			    }
+				k++;
+			}
+			if (k != 0) {
+				coefficient = Integer.valueOf((String) reactant.subSequence(0, k));
+			    reactant = reactant.substring(String.valueOf(coefficient).length());
+			    reactantsSum += coefficient * getStdGibbsFreeEnergyFromFormulaAndPhase(reactant, phase);
 			}
 		}
-			    return productsSum - reactantsSum;
+		for (int j=0; j < products.length; j++) {
+			String product = products[j];
+			phase = productPhases[j];
+			coefficient = 1;
+			k = 0;
+			while (Character.isDigit(product.charAt(k))) {
+				k++;
+			}	
+			if (k != 0) {
+				coefficient = Integer.valueOf(product.substring(0, k));
+				product = product.substring(String.valueOf(coefficient).length());
+			}
+			productsSum += coefficient * getStdGibbsFreeEnergyFromFormulaAndPhase(product, phase);
+		}
+	
+	    return productsSum - reactantsSum;
 	}
 	
 	public static double getGibbsFromEnthalpyAndEntropyAndTemp(double enthalpy, double entropy, double temp) {
