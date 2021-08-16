@@ -1,5 +1,7 @@
 package results;
 
+import static data.DataReader.functionalGroups;
+
 public class OrganicMolecules {
 	
 	public static String getNameFromCarbonChainLength(int length) {
@@ -7,7 +9,9 @@ public class OrganicMolecules {
 		return names[length];
 	}
 	
-	public static void getFunctionalGroups() {
-		
+	public static void printFunctionalGroups() {
+		for (String line : functionalGroups) {
+			System.out.println(line);
+		}
 	}
 }

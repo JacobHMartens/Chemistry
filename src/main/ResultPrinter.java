@@ -15,10 +15,10 @@ public class ResultPrinter {
 	public static void main(String[] args) throws FileNotFoundException {
 		DataReader.loadData();
 		
-		print(getMolarMassFromFormula("KOH"));
+		// print(getMolarMassFromFormula("KOH"));
 		// print(getMassPercentageFromFormula("O", "C17H21O4N"));
-		print(getNameFromFormula("KOH"));
-		print(getNumberOfAtomsFromMassOfFormula("Ag", 10, "AgNO3"));
+		// print(getNameFromFormula("KOH"));
+		// print(getNumberOfAtomsFromMassOfFormula("Ag", 10, "AgNO3"));
 		// print(getMassFromMole("O2", 1));
 		// print(getMolesFromMass("C6H12O6", 10));
 		// print(getMassFromLiquidReactantsAndMolarAndVolume("KOH", new String[] {"K", "OH"}, new double[] {1, 2}, new double[] {0.1, 0.005}));
@@ -32,8 +32,9 @@ public class ResultPrinter {
 		// print(getSpontaneousTempFromEnthalpyAndEntropy(5400, 18));
 		// print(getStdGibbsFromTempAndEquilConst(273+800, 2.5*Math.pow(10,(-3))));
 		// print(getEquilConstForStdFreeEnergyFromReactionAndTemp(new String[] {"2SO2", "O2"}, new String[] {"g", "g"}, new String[] {"2SO3"}, new String[] {"g"}, 273.15+25));
-		// print(getElectronicConfig("Ni(2+)"));
+		// print(getElectronicConfig("Br(4+)"));
 		// print(getAtomNumberFromElement("P"));
+		printFunctionalGroups();
 
 	}
 	
