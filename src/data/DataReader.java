@@ -2,7 +2,9 @@ package data;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -44,6 +46,11 @@ public class DataReader {
 	public static Map<Integer, String> atomicNumberToElectroConfig = new HashMap<Integer, String>();
 	public static Map<String, String> nameToElectroConfig = new HashMap<String, String>();
 
+	/*
+	 * Data for functional groups (Organic chemistry)
+	 */
+	public static List<String> functionalGroups = new ArrayList<String>();
+	
 	public static void loadData() throws FileNotFoundException {
 		readElements();
 		readAcidsBases();
@@ -52,6 +59,7 @@ public class DataReader {
 		readStdEntropies();
 		readStdGibbsFreeEnergy();
 		readElectronicConfigurations();
+		readFunctionalGroups();
 	}
 	
 	private static void readElements() throws FileNotFoundException {
@@ -255,6 +263,18 @@ public class DataReader {
 		}
 		dataReader.close();
 	}
+	
+	private static void readFunctionalGroups() throws FileNotFoundException {
+		File file = new File("Data files/ListOfFunctionalGroups.txt");
+		dataReader = new Scanner(file);
+		
+		while (dataReader.hasNextLine()) {
+			// Load data into array
+			functionalGroups.add(dataReader.nextLine());
+		}
+		dataReader.close();
+	}
+	
 
 }
 

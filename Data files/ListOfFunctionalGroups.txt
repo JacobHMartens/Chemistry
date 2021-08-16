@@ -1,0 +1,14 @@
+Amino -NH2
+Fluoro -F
+Chloro -Cl
+Bromo -Br
+Iodo -I
+Nitro -NO2
+Vinyl -CH=CH2
+Alkohol R-OH ROH
+Ether R-O-R ROR
+Aldehyd R-(O=C-H) RCHO
+Keton R-(C=O)-R RCOR
+Carboxylsyre R-(O=C-OH) RCOOH
+Ester R-(O=C-O)-R RCOOR
+Amino R-(R-N)-R R3N

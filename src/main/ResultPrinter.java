@@ -32,8 +32,9 @@ public class ResultPrinter {
 		// print(getSpontaneousTempFromEnthalpyAndEntropy(5400, 18));
 		// print(getStdGibbsFromTempAndEquilConst(273+800, 2.5*Math.pow(10,(-3))));
 		// print(getEquilConstForStdFreeEnergyFromReactionAndTemp(new String[] {"2SO2", "O2"}, new String[] {"g", "g"}, new String[] {"2SO3"}, new String[] {"g"}, 273.15+25));
-		print(getElectronicConfig("Br(4+)"));
+		// print(getElectronicConfig("Br(4+)"));
 		// print(getAtomNumberFromElement("P"));
+		printFunctionalGroups();
 
 	}
 	
