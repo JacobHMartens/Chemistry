@@ -23,12 +23,12 @@ public class Reactions {
 	public static double getMassFromGasReactantsAndMass(String targetProduct, String[] reactants, double[] mass) {
 	    double limReactant = -1;
 	    String targetProductMole = getPrecedingNumbers(targetProduct);
-	    if (targetProductMole == "")
+	    if (targetProductMole.equals(""))
 	        targetProductMole = "1";
 	    for (int i=0; i < reactants.length; i++) {
 	        String curMole = "1";
 	        String potMole = getPrecedingNumbers(reactants[i]);
-	        if (potMole != "")
+	        if (!potMole.equals(""))
 	            curMole = potMole;
 	  
 	        String pureReactant = reactants[i].substring(getPrecedingNumbers(reactants[i]).length());
@@ -41,4 +41,5 @@ public class Reactions {
 	    String pureTargetProduct = targetProduct.substring(getPrecedingNumbers(targetProduct).length());
 	    return limReactant * getMolarMassFromFormula(pureTargetProduct);
 	}
+	
 }

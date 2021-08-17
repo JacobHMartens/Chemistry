@@ -7,22 +7,22 @@ public class Thermodynamics {
 	
 	private static String getPhaseFormat(String phase) {
 		phase = phase.toLowerCase();
-		if (phase == "gas" || phase == "g")
+		if (phase.equals("gas") || phase.equals("g"))
 	        return "(g)";
-		else if (phase == "liquid" || phase == "l")
+		else if (phase.equals("liquid") || phase.equals("l"))
 			return "(l)";
-		else if (phase == "solid" || phase == "s")
+		else if (phase.equals("solid") || phase.equals("s"))
 	        return "(s)";
-		else if (phase == "aqua" || phase == "aqueous" || phase == "aq")
+		else if (phase.equals("aqua") || phase.equals("aqueous") || phase.equals("aq"))
 	        return "(aq)";
 		return null;
 	}
 	
-	public static Double getStdEnthalpyFromFormulaAndPhase(String formula, String phase) {
+	public static String getStdEnthalpyFromFormulaAndPhase(String formula, String phase) {
 		phase = getPhaseFormat(phase);
 		try {
 			double enthalpy = formulaToEnthalpy.get(formula+phase);
-			return enthalpy;
+			return String.format("%f kJ/mol", enthalpy);
 		}
 	    catch (Exception e) {
 	    	System.out.println(String.format("Formula: %s not in data base.", formula));
@@ -30,7 +30,7 @@ public class Thermodynamics {
 	    }
 	}
 	
-	public static double getStdEnthalpyFromReaction(String[] reactants, String[] reactantPhases, String[] products, String[] productPhases) {
+	public static String getStdEnthalpyFromReaction(String[] reactants, String[] reactantPhases, String[] products, String[] productPhases) {
 		double reactantsSum = 0., productsSum = 0.;
 		String phase;
 		int coefficient, k;
@@ -45,7 +45,9 @@ public class Thermodynamics {
 			if (k != 0) {
 				coefficient = Integer.valueOf((String) reactant.subSequence(0, k));
 			    reactant = reactant.substring(String.valueOf(coefficient).length());
-			    reactantsSum += coefficient * getStdEnthalpyFromFormulaAndPhase(reactant, phase);
+			    String stdEnthalpyString = getStdEnthalpyFromFormulaAndPhase(reactant, phase);
+			    double stdEnthalpy = Double.valueOf(stdEnthalpyString.substring(0, stdEnthalpyString.length()-7));
+			    reactantsSum += coefficient * stdEnthalpy;
 			}
 		}
 		for (int j=0; j < products.length; j++) {
@@ -60,17 +62,19 @@ public class Thermodynamics {
 				coefficient = Integer.valueOf(product.substring(0, k));
 				product = product.substring(String.valueOf(coefficient).length());
 			}
-			productsSum += coefficient * getStdEnthalpyFromFormulaAndPhase(product, phase);
+			String stdEnthalpyString = getStdEnthalpyFromFormulaAndPhase(product, phase);
+			double stdEnthalpy = Double.valueOf(stdEnthalpyString.substring(0, stdEnthalpyString.length()-7));
+			productsSum += coefficient * stdEnthalpy;
 		}
 	
-	    return productsSum - reactantsSum;
+	    return String.format("%f kJ/mol", productsSum - reactantsSum);
 	}
 	
-	public static Double getStdEntropyFromFormulaAndPhase(String formula, String phase) {
+	public static String getStdEntropyFromFormulaAndPhase(String formula, String phase) {
 		phase = getPhaseFormat(phase);
 		try {
 			double entropy = formulaToEntropy.get(formula+phase);
-			return entropy;
+			return String.format("%f J/(K*mol)", entropy);
 		}
 	    catch (Exception e) {
 	    	System.out.println(String.format("Formula: %s not in data base.", formula));
@@ -78,7 +82,7 @@ public class Thermodynamics {
 	    }
 	}
 	
-	public static double getStdEntropyFromReaction(String[] reactants, String[] reactantPhases, String[] products, String[] productPhases) {
+	public static String getStdEntropyFromReaction(String[] reactants, String[] reactantPhases, String[] products, String[] productPhases) {
 		double reactantsSum = 0., productsSum = 0.;
 		String phase;
 		int coefficient, k;
@@ -93,7 +97,9 @@ public class Thermodynamics {
 			if (k != 0) {
 				coefficient = Integer.valueOf((String) reactant.subSequence(0, k));
 			    reactant = reactant.substring(String.valueOf(coefficient).length());
-			    reactantsSum += coefficient * getStdEntropyFromFormulaAndPhase(reactant, phase);
+			    String stdEntropyString = getStdEntropyFromFormulaAndPhase(reactant, phase);
+				double stdEntropy = Double.valueOf(stdEntropyString.substring(0, stdEntropyString.length()-10));
+			    reactantsSum += coefficient * stdEntropy;
 			}
 		}
 		for (int j=0; j < products.length; j++) {
@@ -108,17 +114,19 @@ public class Thermodynamics {
 				coefficient = Integer.valueOf(product.substring(0, k));
 				product = product.substring(String.valueOf(coefficient).length());
 			}
-			productsSum += coefficient * getStdEntropyFromFormulaAndPhase(product, phase);
+			String stdEntropyString = getStdEntropyFromFormulaAndPhase(product, phase);
+			double stdEntropy = Double.valueOf(stdEntropyString.substring(0, stdEntropyString.length()-10));
+			productsSum += coefficient * stdEntropy;
 		}
 	
-	    return productsSum - reactantsSum;
+	    return String.format("%f J/(K*mol)", productsSum - reactantsSum);
 	}
 	
-	public static Double getStdGibbsFreeEnergyFromFormulaAndPhase(String formula, String phase) {
+	public static String getStdGibbsFreeEnergyFromFormulaAndPhase(String formula, String phase) {
 		phase = getPhaseFormat(phase);
 		try {
 			double gibbsFreeEnergy = formulaToGibbsFreeEnergy.get(formula+phase);
-			return gibbsFreeEnergy;
+			return String.format("%f kJ/mol", gibbsFreeEnergy);
 		}
 	    catch (Exception e) {
 	    	System.out.println(String.format("Formula: %s not in data base.", formula));
@@ -126,7 +134,7 @@ public class Thermodynamics {
 	    }
 	}
 	
-	public static double getStdGibbsFreeEnergyFromReaction(String[] reactants, String[] reactantPhases, String[] products, String[] productPhases) {
+	public static String getStdGibbsFreeEnergyFromReaction(String[] reactants, String[] reactantPhases, String[] products, String[] productPhases) {
 		double reactantsSum = 0., productsSum = 0.;
 		String phase;
 		int coefficient, k;
@@ -141,7 +149,9 @@ public class Thermodynamics {
 			if (k != 0) {
 				coefficient = Integer.valueOf((String) reactant.subSequence(0, k));
 			    reactant = reactant.substring(String.valueOf(coefficient).length());
-			    reactantsSum += coefficient * getStdGibbsFreeEnergyFromFormulaAndPhase(reactant, phase);
+			    String stdGibbsString = getStdGibbsFreeEnergyFromFormulaAndPhase(reactant, phase);
+				double stdGibbs = Double.valueOf(stdGibbsString.substring(0, stdGibbsString.length()-7));
+			    reactantsSum += coefficient * stdGibbs;
 			}
 		}
 		for (int j=0; j < products.length; j++) {
@@ -156,14 +166,16 @@ public class Thermodynamics {
 				coefficient = Integer.valueOf(product.substring(0, k));
 				product = product.substring(String.valueOf(coefficient).length());
 			}
-			productsSum += coefficient * getStdGibbsFreeEnergyFromFormulaAndPhase(product, phase);
+			String stdGibbsString = getStdGibbsFreeEnergyFromFormulaAndPhase(product, phase);
+			double stdGibbs = Double.valueOf(stdGibbsString.substring(0, stdGibbsString.length()-7));
+			productsSum += coefficient * stdGibbs;
 		}
 	
-	    return productsSum - reactantsSum;
+	    return String.format("%f kJ/mol", productsSum - reactantsSum);
 	}
 	
-	public static double getGibbsFromEnthalpyAndEntropyAndTemp(double enthalpy, double entropy, double temp) {
-		return enthalpy - temp * entropy;
+	public static String getGibbsFromEnthalpyAndEntropyAndTemp(double enthalpy, double entropy, double temp) {
+		return String.format("%f J/mol or kJ/mol (depends on which units you used for the entropy and enthalpy)", enthalpy - temp * entropy);
 	}
 	
 	public static String getSpontaneousTempFromEnthalpyAndEntropy(double enthalpy, double entropy) {
@@ -175,8 +187,10 @@ public class Thermodynamics {
 	}
 	
 	public static String getEquilConstForStdFreeEnergyFromReactionAndTemp(String[] reactants, String[] reactantPhases, String[] products, String[] productPhases, double temp) {
-	    // Std Gibbs in Joule
-	    double stdGibbs = 1000 * getStdGibbsFreeEnergyFromReaction(reactants, reactantPhases, products, productPhases);
+	    // Std Gibbs conversion to Joule
+		String stdGibbsString = getStdGibbsFreeEnergyFromReaction(reactants, reactantPhases, products, productPhases);
+		double stdGibbs = 1000 * Double.valueOf(stdGibbsString.substring(0, stdGibbsString.length()-7));
+	    
 	    String K = String.valueOf(Math.exp(stdGibbs / (-RThermo*temp)));
 	    if (K.contains("e"))
 	        K = K.replace("e+", " x 10^");

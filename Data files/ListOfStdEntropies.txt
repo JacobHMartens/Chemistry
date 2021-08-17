@@ -1,3 +1,4 @@
+name Ag(s) 42.7
 name Ag(+)(aq) 73.9
 name AgCl(s) 96.1
 name Al(s) 28.3

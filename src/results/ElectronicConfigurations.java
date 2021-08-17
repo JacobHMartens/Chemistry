@@ -1,20 +1,18 @@
 package results;
 
+import static results.BaseOperations.getIonChargeAndRoot;
+
+import objects.Ion;
+
 import static results.AtomsAndMolecules.getAtomNumberFromElement;
 import static data.DataReader.*;
 
 public class ElectronicConfigurations {
 	
 	public static String getElectronicConfig(String element) {
-		int ion = 0;
-		int startIdx = element.indexOf("(") + 1;
-		if (startIdx != -1) {
-			int endIdx = element.indexOf(")") - 1;
-			ion = Integer.valueOf(element.substring(startIdx, endIdx));
-			if (element.charAt(endIdx) == '-')
-				ion *= -1;
-			element = element.substring(0, startIdx-1);	
-		}
+		Ion ionObj = getIonChargeAndRoot(element);
+		int ion = ionObj.getIon();
+		element = ionObj.getFormula();
 		int atomNumber = getAtomNumberFromElement(element);
 		if (ion < 0)
 			atomNumber -= ion;

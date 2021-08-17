@@ -8,6 +8,7 @@ import static results.Reactions.*;
 import static results.Thermodynamics.*;
 import static results.ElectronicConfigurations.*;
 import static results.OrganicMolecules.*;
+import static results.RedoxReaction.*;
 
 
 public class ResultPrinter {
@@ -34,7 +35,8 @@ public class ResultPrinter {
 		// print(getEquilConstForStdFreeEnergyFromReactionAndTemp(new String[] {"2SO2", "O2"}, new String[] {"g", "g"}, new String[] {"2SO3"}, new String[] {"g"}, 273.15+25));
 		// print(getElectronicConfig("Br(4+)"));
 		// print(getAtomNumberFromElement("P"));
-		printFunctionalGroups();
+		// printFunctionalGroups();
+		print(getRedoxReaction(new String[] {"Ca(2+)", "HPO4(2-)"}, new String[] {"Ca5(PO4)3OH"}, "Base"));
 
 	}
 	

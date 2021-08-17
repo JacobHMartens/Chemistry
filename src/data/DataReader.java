@@ -45,11 +45,14 @@ public class DataReader {
 	// Electronic configurations
 	public static Map<Integer, String> atomicNumberToElectroConfig = new HashMap<Integer, String>();
 	public static Map<String, String> nameToElectroConfig = new HashMap<String, String>();
+	
+	public static Map<String, double[]> symbolToOxidationNumbers = new HashMap<String, double[]>();
 
 	/*
 	 * Data for functional groups (Organic chemistry)
 	 */
 	public static List<String> functionalGroups = new ArrayList<String>();
+	
 	
 	public static void loadData() throws FileNotFoundException {
 		readElements();
@@ -60,8 +63,9 @@ public class DataReader {
 		readStdGibbsFreeEnergy();
 		readElectronicConfigurations();
 		readFunctionalGroups();
+		readOxidationNumbers();
 	}
-	
+
 	private static void readElements() throws FileNotFoundException {
 		File file = new File("Data files/ListOfElements.txt");
 		dataReader = new Scanner(file);
@@ -271,6 +275,27 @@ public class DataReader {
 		while (dataReader.hasNextLine()) {
 			// Load data into array
 			functionalGroups.add(dataReader.nextLine());
+		}
+		dataReader.close();
+	}
+	
+	private static void readOxidationNumbers() throws FileNotFoundException {
+		File file = new File("Data files/ListOfOxidationNumbers.txt");
+		dataReader = new Scanner(file);
+		
+		while (dataReader.hasNextLine()) {
+			// Split data
+			String[] data = dataReader.nextLine().split(" ");
+						
+			// Read data fields
+			String symbol = data[2];
+			double[] oxidationNumbers = new double[data.length-3];
+			for (int i=3; i < data.length; i++) {
+				oxidationNumbers[i-3] = Double.valueOf(data[i]);
+			}
+			
+			// Load data into map
+			symbolToOxidationNumbers.put(symbol, oxidationNumbers);
 		}
 		dataReader.close();
 	}
