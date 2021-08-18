@@ -20,7 +20,7 @@ public class Reactions {
 	    return getMassFromMole(targetProduct, limReactant);
 	}
 	
-	public static double getMassFromGasReactantsAndMass(String targetProduct, String[] reactants, double[] mass) {
+	public static double getMassFromGasOrSolidReactantsAndMass(String targetProduct, String[] reactants, double[] mass) {
 	    double limReactant = -1;
 	    String targetProductMole = getPrecedingNumbers(targetProduct);
 	    if (targetProductMole.equals(""))

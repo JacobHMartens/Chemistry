@@ -24,7 +24,13 @@ public class RedoxReaction {
 			reactCoeff.put(react, 1.);
 			Map<String, Integer> reactAtomsTmp = splitFormula(getIonChargeAndRoot(react).getFormula());
 			for (String atom : reactAtomsTmp.keySet()) {
-				reactAtoms.put(atom, reactAtomsTmp.get(atom));
+				if (atom.equals("O") || atom.equals("H"))
+					continue;
+				if (reactAtoms.containsKey(atom))
+					reactAtoms.put(atom, reactAtoms.get(atom) + reactAtomsTmp.get(atom));
+				else {
+					reactAtoms.put(atom, reactAtomsTmp.get(atom));
+				}
 			}
 		}
 		
@@ -33,58 +39,90 @@ public class RedoxReaction {
 			prodCoeff.put(prod, 1.);
 			Map<String, Integer> prodAtomsTmp = splitFormula(getIonChargeAndRoot(prod).getFormula());
 			for (String atom : prodAtomsTmp.keySet()) {
-				prodAtoms.put(atom, prodAtomsTmp.get(atom));
+				if (atom.equals("O") || atom.equals("H"))
+					continue;
+				if (prodAtoms.containsKey(atom))
+					prodAtoms.put(atom, prodAtoms.get(atom) + prodAtomsTmp.get(atom));
+				else {
+					prodAtoms.put(atom, prodAtomsTmp.get(atom));
+				}
 			}
 		}
+		
 		
 		// Equalize number of atoms apart from O and H
-		for (String atom : reactAtoms.keySet()) {
-			if (atom.equals("O") || atom.equals("H"))
-				continue;
-			if (reactAtoms.get(atom) != prodAtoms.get(atom)) {
-				loop1 : for (String prod : prodCoeff.keySet()) {
-					if (prod.contains(atom)) {
-						prodCoeff.put(prod, (double) (int) reactAtoms.get(atom));
-						break loop1;
+		while (!reactAtoms.equals(prodAtoms)) {
+			for (String atom : reactAtoms.keySet()) {
+				if (reactAtoms.get(atom) != prodAtoms.get(atom)) {
+					int tmpReactAtoms = reactAtoms.get(atom);
+					for (String react : reactCoeff.keySet()) {
+						if (react.contains(atom)) {
+							double newCoeff = reactCoeff.get(react) * prodAtoms.get(atom);
+							reactCoeff.put(react, newCoeff);
+							for (String at : splitFormula(getIonChargeAndRoot(react).getFormula()).keySet()) {
+								if (at.equals("O") || at.equals("H"))
+									continue;
+								reactAtoms.put(at, reactAtoms.get(at) * prodAtoms.get(atom));
+							}
+						}
 					}
-				}
-				loop2 : for (String react : reactCoeff.keySet()) {
-					if (react.contains(atom)) {
-						reactCoeff.put(react, (double) (int) prodAtoms.get(atom));
-						break loop2;
+					for (String prod : prodCoeff.keySet()) {
+						if (prod.contains(atom)) {
+							double newCoeff = prodCoeff.get(prod) * tmpReactAtoms;
+							prodCoeff.put(prod, newCoeff);
+							for (String at : splitFormula(getIonChargeAndRoot(prod).getFormula()).keySet()) {
+								if (at.equals("O") || at.equals("H"))
+									continue;
+								prodAtoms.put(at, prodAtoms.get(at) * tmpReactAtoms);
+							}
+						}
 					}
 				}
 			}
 		}
-		
+				
 		// Oxidation numbers for the reactants and the products
 		Map<String, Double> oxidationNumbersReactants = getOxidationNumbers(reactants);
 		Map<String, Double> oxidationNumbersProducts = getOxidationNumbers(products);
-				
+		
 		// Difference in charge/oxidation numbers between LHS and RHS 
 		Map<String, Double> chargeDifference = new HashMap<String, Double>();
-		for (String elem : oxidationNumbersReactants.keySet()) {
+		for (String elem : oxidationNumbersReactants.keySet()) {			
 			double reactOx = oxidationNumbersReactants.get(elem);
 			double prodOx = oxidationNumbersProducts.get(elem);
-
 			if (reactOx != prodOx) {
 				chargeDifference.put(elem, Math.abs(prodOx-reactOx));
 			}
 		}
+
 
 		// Apply coefficients for reactants and products
 		for (String elem : chargeDifference.keySet()) {
 			for (String react : reactants) {
 				if (!react.contains(elem)) {
 					double coeff = chargeDifference.get(elem);
-					reactCoeff.put(react, reactCoeff.get(react)*coeff);
+					for (String prod : products) {
+						if (!prod.contains(elem)) {
+							if (prodCoeff.get(prod) == coeff)
+								coeff = 1;								
+						}
+					}
+					//reactCoeff.put(react, reactCoeff.get(react)*coeff);
+					reactCoeff.put(react, coeff);
 				}
 			}
 			
 			for (String prod : products) {
 				if (!prod.contains(elem)) {
 					double coeff = chargeDifference.get(elem);
-					prodCoeff.put(prod, prodCoeff.get(prod)*coeff);
+					for (String react : reactants) {
+						if (!react.contains(elem)) {
+							if (reactCoeff.get(react) == coeff)
+								coeff = 1;								
+						}
+					}
+					//prodCoeff.put(prod, prodCoeff.get(prod)*coeff);
+					prodCoeff.put(prod, coeff);
 				}
 			}
 		}
@@ -105,7 +143,7 @@ public class RedoxReaction {
 				reactCoeff.put("H(+)", chargeDiff);
 			}
 			else if (chargeDiff < 0) {
-				prodCoeff.put("H(+)", chargeDiff);
+				prodCoeff.put("H(+)", -chargeDiff);
 			}
 		}
 		
@@ -158,6 +196,7 @@ public class RedoxReaction {
 		return finalReaction;
 	}
 	
+	
 	private static Map<String, Double> getOxidationNumbers(String[] terms) {
 		Map<String, Double> oxidationNumbers = new HashMap<String, Double>();
 		
@@ -174,9 +213,13 @@ public class RedoxReaction {
 			}
 			
 			double compoundCharge = 0;
+			int count = 0;
 			while (elements.size() > 0) {
+				
 				Set<String> toBeRemoved = new HashSet<String>();;
-				for (String elem : elements.keySet()) {
+				elemloop: for (String elem : elements.keySet()) {
+					if (toBeRemoved.size() > 0)
+						break elemloop;
 					double ox;
 					double[] oxNbs = symbolToOxidationNumbers.get(elem);
 					
@@ -207,14 +250,45 @@ public class RedoxReaction {
 						toBeRemoved.add(elem);
 					}
 					
-					else {
+					else if (count > elements.size()) {
+						int negOxNbs = 0;
+						for (double oxNb : oxNbs) {
+							if (oxNb < 0)
+								negOxNbs++;
+						}
+						if (negOxNbs == 1 && compoundCharge > 0) {
+							ox = oxNbs[0];
+							oxidationNumbers.put(elem, ox);
+							compoundCharge += ox * elements.get(elem);
+							toBeRemoved.add(elem);
+						}
+						
+						else if (negOxNbs == 0) {
+							for (String e : elements.keySet()) {
+								if (e.equals(elem))
+									continue;
+								int negOxNbs2 = 0;
+								double[] oxNbs2 = symbolToOxidationNumbers.get(e);
+								for (double oxNb : oxNbs2) {
+									if (oxNb < 0)
+										negOxNbs2++;
+								}
+								if (negOxNbs2 == 1) {
+									ox = oxNbs2[0];
+									oxidationNumbers.put(e, ox);
+									compoundCharge += ox * elements.get(e);
+									toBeRemoved.add(e);
+								}
+							}
+						}
 					}
 					
 				}
 				for (String elem : toBeRemoved) {
 					elements.remove(elem);
 				}
-			}			
+				count++;
+			}
 		}
 
 		return oxidationNumbers;

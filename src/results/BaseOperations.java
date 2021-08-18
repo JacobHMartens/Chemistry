@@ -24,8 +24,15 @@ final class BaseOperations {
 				while (Character.isDigit(formula.charAt(j)) && j < formula.length() - 1) {
 					j++;
 				}
-				int multiplier = Integer.valueOf(formula.substring(i+1, j));
-				formula = formula.substring(j) + formula.substring(1, i).repeat(multiplier);
+				int multiplier;
+				if (j < formula.length()-1) {
+					multiplier = Integer.valueOf(formula.substring(i+1, j));
+					formula = formula.substring(j) + formula.substring(1, i).repeat(multiplier);
+				}
+				else {
+					multiplier = Integer.valueOf(formula.substring(i+1));
+					formula = formula.substring(1, i).repeat(multiplier);
+				}
 			}
 			
 			if (Character.isDigit(formula.charAt(0))) {
