@@ -36,7 +36,7 @@ public class ResultPrinter {
 		// print(getElectronicConfig("Br(4+)"));
 		// print(getAtomNumberFromElement("P"));
 		// printFunctionalGroups();
-		print(getRedoxReaction(new String[] {"Ca(2+)", "HPO4(2-)"}, new String[] {"Ca5(PO4)3OH"}, "Base"));
+		print(getRedoxReaction(new String[] {"Ba(2+)", "Cr2O7(2-)"}, new String[] {"BaCrO4"}, "Base"));
 
 	}
 	

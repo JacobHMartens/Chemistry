@@ -166,7 +166,6 @@ public class RedoxReaction {
 			int ion = ionObj.getIon();
 			String formula = ionObj.getFormula();
 			Map<String, Integer> elements = splitFormula(formula);
-			System.out.println(elements.toString());
 			if (elements.size() == 1) {
 				for (String elem : elements.keySet()) {
 					oxidationNumbers.put(elem, (double) ion);

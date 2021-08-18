@@ -25,9 +25,7 @@ final class BaseOperations {
 					j++;
 				}
 				int multiplier = Integer.valueOf(formula.substring(i+1, j));
-				System.out.println(formula);
 				formula = formula.substring(j) + formula.substring(1, i).repeat(multiplier);
-				System.out.println(formula);
 			}
 			
 			if (Character.isDigit(formula.charAt(0))) {
