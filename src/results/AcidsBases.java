@@ -9,7 +9,6 @@ public class AcidsBases {
 		for (String line : strongWeakAcids) {
 			list += line + "\n";
 		}
-		
 		return list;
 	}
 }
