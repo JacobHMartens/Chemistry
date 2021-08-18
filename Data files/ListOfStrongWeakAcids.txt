@@ -1,0 +1,21 @@
+STRONG ACIDS			CONJUGATE BASE
+HClO4 (perchloric acid)		ClO4(-) (perchlorate ion)
+HI (hydroiodic acid)		I(-) (iodide ion)
+HBr (hydrobromic acid)		Br(-) (bromide ion)
+HCl (hydrochloric acid)		Cl(-) (chloride ion)
+H2SO4 (sulfuric acid)		HSO4(-) (hydrogen sulfate ion)
+HNO3 (nitric acid)		NO3(-) (nitrate ion)
+
+NEUTRAL
+H3O(+) (hydronium ion)		H2O (water)
+
+WEAK ACIDS			CONJUGATE BASE
+HSO4(-) (hydrogen sulfate ion)	SO4(2-) (sulfate ion)
+HF (hydrofl uoric acid)		F(-) (fluoride ion)
+HNO2 (nitrous acid)		NO2(-) (nitrite ion)
+HCOOH (formic acid)		HCOO(-) (formate ion)
+CH3COOH (acetic acid)		CH3COO(-) (acetate ion)
+NH4(+) (ammonium ion)		NH3 (ammonia)
+HCN (hydrocyanic acid)		CN(-) (cyanide ion)
+H2O (water)			OH(-) (hydroxide ion)
+NH3 (ammonia)			NH2(-) (amide ion)

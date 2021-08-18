@@ -53,6 +53,16 @@ public class DataReader {
 	 */
 	public static List<String> functionalGroups = new ArrayList<String>();
 	
+	/*
+	 * Data for strong and weak acids and conjugate bases
+	 */
+	public static List<String> strongWeakAcids = new ArrayList<String>();
+	
+	/*
+	 * Data for molal boiling point and freezing point of common liquids
+	 */
+	public static List<String> boilingFreezingPoints = new ArrayList<String>();
+	
 	
 	public static void loadData() throws FileNotFoundException {
 		readElements();
@@ -64,6 +74,8 @@ public class DataReader {
 		readElectronicConfigurations();
 		readFunctionalGroups();
 		readOxidationNumbers();
+		readStrongWeakAcids();
+		readFreezingBoilingPoint();
 	}
 
 	private static void readElements() throws FileNotFoundException {
@@ -300,6 +312,28 @@ public class DataReader {
 		dataReader.close();
 	}
 	
+	private static void readStrongWeakAcids() throws FileNotFoundException {
+		File file = new File("Data files/ListOfStrongWeakAcids.txt");
+		dataReader = new Scanner(file);
+		
+		while (dataReader.hasNextLine()) {
+			// Load data into array
+			strongWeakAcids.add(dataReader.nextLine());
+		}
+		dataReader.close();
+	}
+	
+	private static void readFreezingBoilingPoint() throws FileNotFoundException {
+		File file = new File("Data files/ListOfFreezingAndBoilingPoints.txt");
+		dataReader = new Scanner(file);
+		
+		while (dataReader.hasNextLine()) {
+			// Load data into array
+			boilingFreezingPoints.add(dataReader.nextLine());
+			
+		}
+		dataReader.close();
 
+	}
 }
 

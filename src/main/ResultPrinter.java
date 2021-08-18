@@ -10,6 +10,7 @@ import static results.ElectronicConfigurations.*;
 import static results.OrganicMolecules.*;
 import static results.RedoxReaction.*;
 import static results.IdealGasEquation.*;
+import static results.AcidsBases.*;
 
 
 public class ResultPrinter {
@@ -39,7 +40,7 @@ public class ResultPrinter {
 		// print(getAtomNumberFromElement("P"));
 		// printFunctionalGroups();
 		// print(getUnknownValue(1., null, 5.871114936468665*25, 273+3000.));
-		
+		print(getStrongWeakAcids());
 		
 		print(getRedoxReaction(new String[] {"Al", "NO3(-)"}, new String[] {"Al(OH)4(-)", "NH3"}, "Base"));
 		print(getRedoxReaction(new String[] {"Ba(2+)", "Cr2O7(2-)"}, new String[] {"BaCrO4"}, "Acid"));
