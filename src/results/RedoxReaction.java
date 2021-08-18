@@ -87,42 +87,78 @@ public class RedoxReaction {
 		
 		// Difference in charge/oxidation numbers between LHS and RHS 
 		Map<String, Double> chargeDifference = new HashMap<String, Double>();
-		for (String elem : oxidationNumbersReactants.keySet()) {			
-			double reactOx = oxidationNumbersReactants.get(elem);
-			double prodOx = oxidationNumbersProducts.get(elem);
-			if (reactOx != prodOx) {
-				chargeDifference.put(elem, Math.abs(prodOx-reactOx));
-			}
-		}
-
-
-		// Apply coefficients for reactants and products
-		for (String elem : chargeDifference.keySet()) {
-			for (String react : reactants) {
-				if (!react.contains(elem)) {
-					double coeff = chargeDifference.get(elem);
-					for (String prod : products) {
-						if (!prod.contains(elem)) {
-							if (prodCoeff.get(prod) == coeff)
-								coeff = 1;								
-						}
+		for (String elem : oxidationNumbersReactants.keySet()) {
+			double multiplier = 1;
+			for (String react : reactCoeff.keySet()) {
+				if (react.contains(elem)) {
+					if (splitFormula(getIonChargeAndRoot(react).getFormula()).size() == 1) {  // If single atom or ion
+						multiplier = reactCoeff.get(react);
 					}
-					//reactCoeff.put(react, reactCoeff.get(react)*coeff);
-					reactCoeff.put(react, coeff);
 				}
 			}
+			double reactOx = oxidationNumbersReactants.get(elem) * multiplier;
 			
-			for (String prod : products) {
-				if (!prod.contains(elem)) {
-					double coeff = chargeDifference.get(elem);
-					for (String react : reactants) {
-						if (!react.contains(elem)) {
-							if (reactCoeff.get(react) == coeff)
-								coeff = 1;								
+			if (!oxidationNumbersProducts.containsKey(elem))
+				continue;
+			
+			multiplier = 1;
+			for (String prod : prodCoeff.keySet()) {
+				if (prod.contains(elem)) {
+					if (splitFormula(getIonChargeAndRoot(prod).getFormula()).size() == 1) {  // If single atom or ion
+						multiplier = prodCoeff.get(prod);
+					}
+				}
+			}
+			double prodOx = oxidationNumbersProducts.get(elem) * multiplier;
+			if (reactOx != prodOx) {
+				chargeDifference.put(elem, prodOx-reactOx);
+			}
+		}
+		
+		// Product of charge differences
+		double totalMultiplier = 1;
+		double totalChargeSum = 0;
+		for (double charge : chargeDifference.values()) {
+			totalMultiplier *= Math.abs(charge);
+			totalChargeSum += charge;
+		}
+
+		// Apply coefficients for reactants and products
+		if (totalChargeSum != 0) {
+			for (String elem : chargeDifference.keySet()) {
+				double chargeDiff = chargeDifference.get(elem);
+				if (chargeDiff < 0) {
+					chargeDiff *= -1;
+					for (String prod : products) {
+						if (prod.contains(elem)) {
+							if (prodCoeff.get(prod) != totalMultiplier/chargeDiff) {
+								prodCoeff.put(prod, prodCoeff.get(prod) * totalMultiplier/chargeDiff);
+								for (String react : reactants) {
+									if (react.contains(elem)) {
+										if (reactCoeff.get(react) != totalMultiplier/chargeDiff) {
+											reactCoeff.put(react, reactCoeff.get(react) * totalMultiplier/chargeDiff);
+										}
+									}
+								}
+							}						
 						}
 					}
-					//prodCoeff.put(prod, prodCoeff.get(prod)*coeff);
-					prodCoeff.put(prod, coeff);
+				}
+				else if (chargeDiff > 0) {
+					for (String react : reactants) {
+						if (react.contains(elem)) {
+							if (reactCoeff.get(react) != totalMultiplier/chargeDiff) {
+								reactCoeff.put(react, reactCoeff.get(react) * totalMultiplier/chargeDiff);
+								for (String prod : products) {
+									if (prod.contains(elem)) {
+										if (prodCoeff.get(prod) != totalMultiplier/chargeDiff) {
+											prodCoeff.put(prod, prodCoeff.get(prod) * totalMultiplier/chargeDiff);
+										}
+									}
+								}
+							}						
+						}
+					}
 				}
 			}
 		}
@@ -181,19 +217,20 @@ public class RedoxReaction {
 		else if (oxygenDiff < 0) {
 			prodCoeff.put("H2O", -oxygenDiff);
 		}
-
+		
+		
 		// Print final reaction
 		String finalReaction = "";
 		for (Entry<String, Double> react : reactCoeff.entrySet()) {
-			finalReaction += react.getValue() + " " + react.getKey() + " + ";
+			finalReaction += (int) (double) react.getValue() + " " + react.getKey() + " + ";
 		}
 		finalReaction = finalReaction.substring(0, finalReaction.length()-3) + " --> ";
 		for (Entry<String, Double> prod : prodCoeff.entrySet()) {
-			finalReaction += prod.getValue() + " " + prod.getKey() + " + ";
+			finalReaction += (int) (double) prod.getValue() + " " + prod.getKey() + " + ";
 		}
 		finalReaction = finalReaction.substring(0, finalReaction.length()-3);
 		
-		return finalReaction;
+		return finalReaction + "\t\t(Good idea to check for equal amounts of hydrogen on both sides!)";
 	}
 	
 	
@@ -281,6 +318,11 @@ public class RedoxReaction {
 								}
 							}
 						}
+					}
+					
+					if (count > 100) {
+						System.out.println("Unable to compute redox reaction...");
+						System.exit(0);
 					}
 					
 				}
