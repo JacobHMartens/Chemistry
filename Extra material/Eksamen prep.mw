@@ -4091,7 +4091,7 @@
 </Output>
 </Group></Presentation-Block><Presentation-Block>
 <Group view="presentation" inline-output="false" labelreference="L1790" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
-<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">HUSK nogen gange kan det v\303\246re at den syre/base reagerer med den anden i det tilf\303\246lde skal de to tr\303\246kkes fra hinanden  </Font></Text-field>
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">HUSK n\303\245r der arbejdes med en st\303\246rk syre og en svag base tr\303\246kkes syren fra basen n\303\245r pufferligningen bruges  </Font></Text-field>
 </Input>
 </Group></Presentation-Block><Presentation-Block>
 <Group view="presentation" hide-input="false" hide-output="false" inline-output="false" labelreference="L1802" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
