@@ -24,7 +24,7 @@ Calcium sulfate(s) CaSO4(s) -1309.1
 Calcium sulfide(s) CaS(s) -477.4
 Carbon (graphite)(s) C(s) 0
 Carbon (diamond)(s) C(s) 2.900
-Carbon dioxide(g) CO2(g) -394.39
+Carbon dioxide(g) CO2(g) -394.4
 Carbonic acid(aq) H2CO3(aq) -623.1
 Bicarbonate(aq) HCO3(-)(aq) -586.85
 Carbonate ion(aq) CO3(2-)(aq) -527.8
@@ -59,7 +59,7 @@ Magnesium sulfate(s) MgSO4(s) -1170.6
 Manganese(II) oxide(s) MnO(s) -362.9
 Manganese(IV) oxide(s) MnO2(s) -465.2
 Mercury(II) oxide (red)(s) HgO(s) -58.49
-Mercury sulfide (red, cinnabar)(s) HgS(s) -50.6
+Mercury sulfide (redcinnabar)(s) HgS(s) -50.6
 Ammonia(aq) NH3(aq) -26.57
 Ammonia(g) NH3(g) -16.4
 Ammonium chloride(s) NH4Cl(s) -203.89
@@ -217,18 +217,19 @@ name ZnO(s) -318.2
 name ZnCl2(s) -369.26
 name ZnS(s) -198.3
 name ZnSO4(s) -871.6
-name Acetic acid(l) CH3COOH -389.45
-name Acetaldehyde(g) CH3CHO -139.08
-name Acetone(l) CH3COCH3 -153.55
-name Acetylene(g) C2H2 209.2
-name Benzene(l) C6H6 124.5
-name Butane(g) C4H10 -15.7
-name Ethanol(l) C2H5OH -174.18
-name Ethane(g) C2H6 -32.89
-name Ethylene(g) C2H4 68.1
-name Formic acid(l) HCOOH -346.0
-name Glucose(s) C6H12O6 -910.56
-name Methane(g) CH4 -50.8
-name Methanol(l) CH3OH -166.3
-name Propane(g) C3H8 -23.5
-name Sucrose(s) C12H22O11 -1544.3
+name Acetic acid(l) CH3COOH(l) -389.45
+name Acetaldehyde(g) CH3CHO(g) -139.08
+name Acetone(l) CH3COCH3(l) -153.55
+name Acetylene(g) C2H2(g) 209.2
+name Benzene(l) C6H6(l) 124.5
+name Butane(g) C4H10(g) -15.7
+name Ethanol(l) C2H5OH(l) -174.18
+name Ethane(g) C2H6(g) -32.89
+name Ethylene(g) C2H4(g) 68.1
+name Formic acid(l) HCOOH(l) -346.0
+name Glucose(s) C6H12O6(s) -910.56
+name Methane(g) CH4(g) -50.8
+name Methanol(l) CH3OH(l) -166.3
+name Propane(g) C3H8(g) -23.5
+name Sucrose(s) C12H22O11(s) -1544.3
+name dioxygen(g) O2(g) 0.0

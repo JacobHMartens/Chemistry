@@ -153,6 +153,7 @@ public class Thermodynamics {
 				double stdGibbs = Double.valueOf(stdGibbsString.substring(0, stdGibbsString.length()-7));
 			    reactantsSum += coefficient * stdGibbs;
 			}
+			
 		}
 		for (int j=0; j < products.length; j++) {
 			String product = products[j];
