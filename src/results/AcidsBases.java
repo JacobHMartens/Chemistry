@@ -11,4 +11,10 @@ public class AcidsBases {
 		}
 		return list;
 	}
+	
+	/*
+	public static double getPHFromWeakAcidStrongBaseAndVolume(String acidFormula, String baseFormula, double pKa, double Volume) {
+		// Q9 i maple, Q 13 i F17 exam
+	}
+	*/
 }

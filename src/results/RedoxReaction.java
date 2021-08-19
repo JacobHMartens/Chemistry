@@ -49,6 +49,8 @@ public class RedoxReaction {
 			}
 		}
 		
+		System.out.println(reactAtoms + " " + prodAtoms);
+
 		
 		// Equalize number of atoms apart from O and H
 		while (!reactAtoms.equals(prodAtoms)) {
@@ -80,7 +82,8 @@ public class RedoxReaction {
 				}
 			}
 		}
-				
+		
+		
 		// Oxidation numbers for the reactants and the products
 		Map<String, Double> oxidationNumbersReactants = getOxidationNumbers(reactants);
 		Map<String, Double> oxidationNumbersProducts = getOxidationNumbers(products);
@@ -130,11 +133,11 @@ public class RedoxReaction {
 				if (chargeDiff < 0) {
 					chargeDiff *= -1;
 					for (String prod : products) {
-						if (prod.contains(elem)) {
+						if (splitFormula(getIonChargeAndRoot(prod).getFormula()).containsKey(elem)) {
 							if (prodCoeff.get(prod) != totalMultiplier/chargeDiff) {
 								prodCoeff.put(prod, prodCoeff.get(prod) * totalMultiplier/chargeDiff);
 								for (String react : reactants) {
-									if (react.contains(elem)) {
+									if (splitFormula(getIonChargeAndRoot(react).getFormula()).containsKey(elem)) {
 										if (reactCoeff.get(react) != totalMultiplier/chargeDiff) {
 											reactCoeff.put(react, reactCoeff.get(react) * totalMultiplier/chargeDiff);
 										}
@@ -146,11 +149,11 @@ public class RedoxReaction {
 				}
 				else if (chargeDiff > 0) {
 					for (String react : reactants) {
-						if (react.contains(elem)) {
+						if (splitFormula(getIonChargeAndRoot(react).getFormula()).containsKey(elem)) {
 							if (reactCoeff.get(react) != totalMultiplier/chargeDiff) {
 								reactCoeff.put(react, reactCoeff.get(react) * totalMultiplier/chargeDiff);
 								for (String prod : products) {
-									if (prod.contains(elem)) {
+									if (splitFormula(getIonChargeAndRoot(prod).getFormula()).containsKey(elem)) {
 										if (prodCoeff.get(prod) != totalMultiplier/chargeDiff) {
 											prodCoeff.put(prod, prodCoeff.get(prod) * totalMultiplier/chargeDiff);
 										}
