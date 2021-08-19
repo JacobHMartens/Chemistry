@@ -11,4 +11,5 @@ Aldehyd R-(O=C-H) RCHO
 Keton R-(C=O)-R RCOR
 Carboxylsyre R-(O=C-OH) RCOOH
 Ester R-(O=C-O)-R RCOOR
-Amino R-(R-N)-R R3N
+Amine R-(R-N)-R R3N
+Amid R-(N-H)-R RNHR
