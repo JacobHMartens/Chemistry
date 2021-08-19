@@ -2816,6 +2816,18 @@
 <Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Katode reaktioner vil der altid v\303\246rden den som reducere alts\303\245 den som modtager elektroner.</Font></Text-field>
 </Input>
 </Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1939" drawlabel="true" outputmask="0.0{2}E-0{1}" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Hvis det er en <Font bold="true">anode</Font><Font encoding="UTF-8"> reaktion skal elektronerne v\303\246re p\303\245 </Font><Font bold="true">produkt</Font> siden.</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1941" drawlabel="true" outputmask="0.0{2}E-0{1}" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Hvis det er en <Font bold="true">katode</Font><Font encoding="UTF-8"> reaktion skal elektronerne v\303\246re p\303\245 </Font><Font bold="true">reaktant</Font> siden.</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1940" drawlabel="true" outputmask="0.0{2}E-0{1}" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Equation executable="true" style="2D Math" input-equation="" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYlLUkjbWlHRiQ2I1EhRicvJStleGVjdXRhYmxlR1EmZmFsc2VGJy8lLG1hdGh2YXJpYW50R1Enbm9ybWFsRic=">JSFH</Equation></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
 <Group view="presentation" inline-output="false" labelreference="L1134" drawlabel="true" outputmask="0.0{2}E-0{1}" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Alt bliver m\303\245lt i </Font><Font bold="true">Volt V</Font></Text-field>
 </Input>
